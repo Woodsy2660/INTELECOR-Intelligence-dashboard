@@ -1,0 +1,65 @@
+# Roy Cardiology — INTELECOR tenant configuration
+# This file defines practice-specific settings that drive analytics behaviour
+
+tenant:
+  id: tnt_roycardiology_001
+  name: Roy Cardiology
+  entity: INTELECOR
+  abn: null  # Awaiting from Andrew
+  contact_email: andrew@roycardiology.com.au
+
+practitioner:
+  id: prac_001
+  name: Dr Andrew Roy
+  specialty: Cardiology - Interventional
+
+locations:
+  - id: loc_001
+    name: Roy Cardiology - Macquarie Street
+    address: Suite 1201, 135 Macquarie Street, Sydney NSW 2000
+  - id: loc_002
+    name: St Vincent's Hospital - Cath Lab
+    address: 390 Victoria Street, Darlinghurst NSW 2010
+
+# Data source configuration
+adapter:
+  type: mock  # mock | gentu | csv
+  # gentu_api_key: null  # Set when developer partnership is approved
+  # csv_billing_path: null  # Path to Gentu billing CSV export
+
+# Analytics module configuration
+analytics:
+  financial:
+    enabled: true
+    mbs_items_tracked:
+      - { item: "110", description: "Initial consultation", schedule_fee: 178.70 }
+      - { item: "116", description: "Subsequent attendance", schedule_fee: 89.35 }
+      - { item: "119", description: "Minor subsequent", schedule_fee: 44.70 }
+      - { item: "55126", description: "Transthoracic echo", schedule_fee: 327.85 }
+      - { item: "55141", description: "Exercise stress echo", schedule_fee: 448.10 }
+      - { item: "11700", description: "ECG 12 lead", schedule_fee: 34.20 }
+      - { item: "91824", description: "Telehealth video", schedule_fee: 89.35 }
+    leakage_detection:
+      overdue_gap_days: 14
+      flag_rejected_claims: true
+      flag_unbilled_appointments: true
+  operations:
+    enabled: true
+    dna_alert_threshold: 10.0  # percentage
+    utilisation_target: 85.0  # percentage
+  documents:
+    enabled: true
+    unsigned_warning_days: 7
+    unsigned_critical_days: 14
+
+# Report delivery
+reports:
+  email_digest:
+    enabled: true
+    schedule: "07:00"  # AEST
+    recipients:
+      - andrew@roycardiology.com.au
+  llm_summary:
+    enabled: true
+    provider: anthropic  # anthropic | ollama
+    schedule: "06:30"  # AEST, runs before email digest

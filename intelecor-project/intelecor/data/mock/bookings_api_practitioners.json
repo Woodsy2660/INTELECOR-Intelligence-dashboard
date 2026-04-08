@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "tenant_id": "tnt_roycardiology_001",
+    "api_version": "1.0",
+    "request_timestamp": "2026-04-07T08:00:00+10:00"
+  },
+  "practitioners": [
+    {
+      "id": "prac_001",
+      "title": "Dr",
+      "given_name": "Andrew",
+      "family_name": "Roy",
+      "provider_numbers": [
+        {
+          "number": "2345678A",
+          "location_id": "loc_001",
+          "location_name": "Roy Cardiology - Macquarie Street"
+        },
+        {
+          "number": "2345678B",
+          "location_id": "loc_002",
+          "location_name": "St Vincent's Hospital - Cath Lab"
+        }
+      ],
+      "specialty": "Cardiology - Interventional",
+      "ahpra_number": "MED0001234567",
+      "active": true,
+      "appointment_types": [
+        {
+          "id": "type_consult_init",
+          "name": "Initial Consultation",
+          "duration_minutes": 45,
+          "category": "consultation",
+          "colour": "#4A90D9",
+          "bookable_online": true
+        },
+        {
+          "id": "type_consult_followup",
+          "name": "Follow-up Consultation",
+          "duration_minutes": 20,
+          "category": "consultation",
+          "colour": "#7BC47F",
+          "bookable_online": true
+        },
+        {
+          "id": "type_echo_tte",
+          "name": "Echocardiogram - TTE",
+          "duration_minutes": 45,
+          "category": "procedure",
+          "colour": "#E8913A",
+          "bookable_online": false
+        },
+        {
+          "id": "type_stress_echo",
+          "name": "Exercise Stress Echo",
+          "duration_minutes": 60,
+          "category": "procedure",
+          "colour": "#D94A4A",
+          "bookable_online": false
+        },
+        {
+          "id": "type_stress_ecg",
+          "name": "Exercise Stress ECG",
+          "duration_minutes": 30,
+          "category": "procedure",
+          "colour": "#D97A4A",
+          "bookable_online": false
+        },
+        {
+          "id": "type_holter",
+          "name": "Holter Monitor Fitting",
+          "duration_minutes": 15,
+          "category": "procedure",
+          "colour": "#9B59B6",
+          "bookable_online": false
+        },
+        {
+          "id": "type_consult_telehealth",
+          "name": "Telehealth Consultation",
+          "duration_minutes": 20,
+          "category": "consultation",
+          "colour": "#3498DB",
+          "bookable_online": true
+        }
+      ],
+      "schedule": {
+        "timezone": "Australia/Sydney",
+        "weekly_availability": [
+          {
+            "day": "monday",
+            "location_id": "loc_001",
+            "start_time": "09:00",
+            "end_time": "17:00",
+            "break_start": "12:30",
+            "break_end": "13:30"
+          },
+          {
+            "day": "tuesday",
+            "location_id": "loc_002",
+            "start_time": "07:30",
+            "end_time": "13:00",
+            "break_start": null,
+            "break_end": null
+          },
+          {
+            "day": "wednesday",
+            "location_id": "loc_001",
+            "start_time": "09:00",
+            "end_time": "17:00",
+            "break_start": "12:30",
+            "break_end": "13:30"
+          },
+          {
+            "day": "thursday",
+            "location_id": "loc_001",
+            "start_time": "09:00",
+            "end_time": "17:00",
+            "break_start": "12:30",
+            "break_end": "13:30"
+          },
+          {
+            "day": "friday",
+            "location_id": "loc_001",
+            "start_time": "09:00",
+            "end_time": "13:00",
+            "break_start": null,
+            "break_end": null
+          }
+        ],
+        "blocked_dates": [
+          {
+            "date": "2026-04-27",
+            "reason": "ANZAC Day Public Holiday (observed)"
+          },
+          {
+            "date": "2026-05-15",
+            "reason": "Conference - CSANZ Annual Meeting"
+          },
+          {
+            "date": "2026-05-16",
+            "reason": "Conference - CSANZ Annual Meeting"
+          }
+        ]
+      }
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc_001",
+      "name": "Roy Cardiology - Macquarie Street",
+      "address": {
+        "line": "Suite 1201, 135 Macquarie Street",
+        "suburb": "Sydney",
+        "state": "NSW",
+        "postcode": "2000"
+      },
+      "phone": "0292001234",
+      "fax": "0292001235",
+      "email": "reception@roycardiology.com.au",
+      "active": true
+    },
+    {
+      "id": "loc_002",
+      "name": "St Vincent's Hospital - Cath Lab",
+      "address": {
+        "line": "390 Victoria Street",
+        "suburb": "Darlinghurst",
+        "state": "NSW",
+        "postcode": "2010"
+      },
+      "phone": "0283821111",
+      "fax": null,
+      "email": null,
+      "active": true
+    }
+  ],
+  "referrals": [
+    {
+      "id": "ref_5035",
+      "patient_id": "pat_10789",
+      "referring_doctor": {
+        "title": "Dr",
+        "given_name": "James",
+        "family_name": "Anderson",
+        "provider_number": "7890123F",
+        "practice_name": "Canterbury Road Medical",
+        "address": "210 Canterbury Road, Canterbury NSW 2193",
+        "phone": "0297891234"
+      },
+      "referral_date": "2026-04-01",
+      "received_date": "2026-04-02",
+      "valid_to": "2026-07-01",
+      "referral_period_months": 3,
+      "referral_reason": "Syncope, query arrhythmia",
+      "urgency": "routine",
+      "status": "active",
+      "linked_appointment_id": "appt_20260407_001",
+      "created_at": "2026-04-02T14:00:00+10:00"
+    },
+    {
+      "id": "ref_5040",
+      "patient_id": "pat_10890",
+      "referring_doctor": {
+        "title": "Dr",
+        "given_name": "Sarah",
+        "family_name": "Chen",
+        "provider_number": "3456789B",
+        "practice_name": "Surry Hills Medical Centre",
+        "address": "88 Crown Street, Surry Hills NSW 2010",
+        "phone": "0291234567"
+      },
+      "referral_date": "2026-04-03",
+      "received_date": "2026-04-04",
+      "valid_to": "2026-07-03",
+      "referral_period_months": 3,
+      "referral_reason": "Shortness of breath on exertion, elevated BNP",
+      "urgency": "semi_urgent",
+      "status": "pending_appointment",
+      "linked_appointment_id": null,
+      "created_at": "2026-04-04T09:30:00+10:00"
+    },
+    {
+      "id": "ref_5042",
+      "patient_id": "pat_10901",
+      "referring_doctor": {
+        "title": "Dr",
+        "given_name": "Emma",
+        "family_name": "Taylor",
+        "provider_number": "6789012E",
+        "practice_name": "CBD Medical Group",
+        "address": "Level 3, 50 Bridge Street, Sydney NSW 2000",
+        "phone": "0292345678"
+      },
+      "referral_date": "2026-04-05",
+      "received_date": "2026-04-07",
+      "valid_to": "2026-07-05",
+      "referral_period_months": 3,
+      "referral_reason": "Newly detected AF on ECG, needs rate control assessment",
+      "urgency": "urgent",
+      "status": "pending_appointment",
+      "linked_appointment_id": null,
+      "created_at": "2026-04-07T07:45:00+10:00"
+    },
+    {
+      "id": "ref_4800",
+      "patient_id": "pat_10550",
+      "referring_doctor": {
+        "title": "Dr",
+        "given_name": "Robert",
+        "family_name": "Williams",
+        "provider_number": "5678901D",
+        "practice_name": "Woollahra Medical",
+        "address": "5 Queen Street, Woollahra NSW 2025",
+        "phone": "0293456789"
+      },
+      "referral_date": "2025-09-15",
+      "received_date": "2025-09-16",
+      "valid_to": "2026-03-15",
+      "referral_period_months": 6,
+      "referral_reason": "Valvular heart disease follow-up",
+      "urgency": "routine",
+      "status": "expired",
+      "linked_appointment_id": "appt_20251020_003",
+      "created_at": "2025-09-16T10:00:00+10:00"
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "meta": {
+    "tenant_id": "tnt_roycardiology_001",
+    "api_version": "1.0",
+    "request_timestamp": "2026-04-07T08:00:00+10:00",
+    "total_records": 24,
+    "page": 1,
+    "per_page": 50
+  },
+  "appointments": [
+    {
+      "id": "appt_20260406_001",
+      "tenant_id": "tnt_roycardiology_001",
+      "patient": {
+        "id": "pat_10234",
+        "title": "Mr",
+        "given_name": "James",
+        "family_name": "Mitchell",
+        "date_of_birth": "1958-03-14",
+        "gender": "male",
+        "medicare_number": "2345678901",
+        "medicare_irn": "1",
+        "dva_file_number": null,
+        "ihi": "8003608166690503",
+        "contact": {
+          "phone_mobile": "0412345678",
+          "phone_home": "0298765432",
+          "email": "j.mitchell@email.com"
+        },
+        "address": {
+          "line": "42 Harbour Street",
+          "suburb": "Darlinghurst",
+          "state": "NSW",
+          "postcode": "2010"
+        },
+        "concession_type": null,
+        "emergency_contact": {
+          "name": "Susan Mitchell",
+          "relationship": "Spouse",
+          "phone": "0412345679"
+        }
+      },
+      "practitioner": {
+        "id": "prac_001",
+        "title": "Dr",
+        "given_name": "Andrew",
+        "family_name": "Roy",
+        "provider_number": "2345678A",
+        "specialty": "Cardiology - Interventional"
+      },
+      "location": {
+        "id": "loc_001",
+        "name": "Roy Cardiology - Macquarie Street",
+        "address": "Suite 1201, 135 Macquarie Street, Sydney NSW 2000"
+      },
+      "appointment_type": {
+        "id": "type_consult_init",
+        "name": "Initial Consultation",
+        "duration_minutes": 45,
+        "colour": "#4A90D9",
+        "category": "consultation"
+      },
+      "scheduled_start": "2026-04-06T09:00:00+10:00",
+      "scheduled_end": "2026-04-06T09:45:00+10:00",
+      "actual_start": "2026-04-06T09:05:00+10:00",
+      "actual_end": "2026-04-06T09:40:00+10:00",
+      "status": "completed",
+      "patient_arrived_at": "2026-04-06T08:52:00+10:00",
+      "did_not_arrive": false,
+      "cancellation_reason": null,
+      "is_new_patient": true,
+      "referral": {
+        "id": "ref_5021",
+        "referring_doctor": {
+          "title": "Dr",
+          "given_name": "Sarah",
+          "family_name": "Chen",
+          "provider_number": "3456789B",
+          "practice_name": "Surry Hills Medical Centre"
+        },
+        "referral_date": "2026-03-20",
+        "valid_to": "2026-06-20",
+        "referral_reason": "Chest pain on exertion, family history of CAD"
+      },
+      "notes": "GP referral for investigation of exertional chest pain. ECG shows non-specific ST changes.",
+      "created_at": "2026-03-25T14:30:00+10:00",
+      "updated_at": "2026-04-06T09:40:00+10:00"
+    },
+    {
+      "id": "appt_20260406_002",
+      "tenant_id": "tnt_roycardiology_001",
+      "patient": {
+        "id": "pat_10102",
+        "title": "Mrs",
+        "given_name": "Margaret",
+        "family_name": "O'Brien",
+        "date_of_birth": "1945-11-22",
+        "gender": "female",
+        "medicare_number": "3456789012",
+        "medicare_irn": "1",
+        "dva_file_number": null,
+        "ihi": "8003608166690504",
+        "contact": {
+          "phone_mobile": "0423456789",
+          "phone_home": "0287654321",
+          "email": null
+        },
+        "address": {
+          "line": "8/15 Victoria Road",
+          "suburb": "Drummoyne",
+          "state": "NSW",
+          "postcode": "2047"
+        },
+        "concession_type": "pension",
+        "emergency_contact": {
+          "name": "Patrick O'Brien",
+          "relationship": "Son",
+          "phone": "0434567890"
+        }
+      },
+      "practitioner": {
+        "id": "prac_001",
+        "title": "Dr",
+        "given_name": "Andrew",
+        "family_name": "Roy",
+        "provider_number": "2345678A",
+        "specialty": "Cardiology - Interventional"
+      },
+      "location": {
+        "id": "loc_001",
+        "name": "Roy Cardiology - Macquarie Street",
+        "address": "Suite 1201, 135 Macquarie Street, Sydney NSW 2000"
+      },
+      "appointment_type": {
+        "id": "type_consult_followup",
+        "name": "Follow-up Consultation",
+        "duration_minutes": 20,
+        "colour": "#7BC47F",
+        "category": "consultation"
+      },
+      "scheduled_start": "2026-04-06T09:45:00+10:00",
+      "scheduled_end": "2026-04-06T10:05:00+10:00",
+      "actual_start": "2026-04-06T09:48:00+10:00",
+      "actual_end": "2026-04-06T10:08:00+10:00",
+      "status": "completed",
+      "patient_arrived_at": "2026-04-06T09:35:00+10:00",
+      "did_not_arrive": false,
+      "cancellation_reason": null,
+      "is_new_patient": false,
+      "referral": {
+        "id": "ref_4890",
+        "referring_doctor": {
+          "title": "Dr",
+          "given_name": "Michael",
+          "family_name": "Peters",
+          "provider_number": "4567890C",
+          "practice_name": "Drummoyne Family Practice"
+        },
+        "referral_date": "2025-10-15",
+        "valid_to": "2026-10-15",
+        "referral_reason": "Aortic stenosis monitoring"
+      },
+      "notes": "Follow-up post echo. Aortic valve gradient stable.",
+      "created_at": "2026-03-10T11:00:00+10:00",
+      "updated_at": "2026-04-06T10:08:00+10:00"
+    },
+    {
+      "id": "appt_20260406_003",
+      "tenant_id": "tnt_roycardiology_001",
+      "patient": {
+        "id": "pat_10456",
+        "title": "Mr",
+        "given_name": "David",
+        "family_name": "Nguyen",
+        "date_of_birth": "1972-07-30",
+        "gender": "male",
+        "medicare_number": "4567890123",
+        "medicare_irn": "1",
+        "dva_file_number": null,
+        "ihi": "8003608166690505",
+        "contact": {
+          "phone_mobile": "0445678901",
+          "phone_home": null,
+          "email": "d.nguyen@work.com.au"
+        },
+        "address": {
+          "line": "201/88 King Street",
+          "suburb": "Newtown",
+          "state": "NSW",
+          "postcode": "2042"
+        },
+        "concession_type": null,
+        "emergency_contact": {
+          "name": "Linh Nguyen",
+          "relationship": "Wife",
+          "phone": "0445678902"
+        }
+      },
+      "practitioner": {
+        "id": "prac_001",
+        "title": "Dr",
+        "given_name": "Andrew",
+        "family_name": "Roy",
+        "provider_number": "2345678A",
+        "specialty": "Cardiology - Interventional"
+      },
+      "location": {
+        "id": "loc_001",
+        "name": "Roy Cardiology - Macquarie Street",
+        "address": "Suite 1201, 135 Macquarie Street, Sydney NSW 2000"
+      },
+      "appointment_type": {
+        "id": "type_echo_tte",
+        "name": "Echocardiogram - TTE",
+        "duration_minutes": 45,
+        "colour": "#E8913A",
+        "category": "procedure"
+      },
+      "scheduled_start": "2026-04-06T10:15:00+10:00",
+      "scheduled_end": "2026-04-06T11:00:00+10:00",
+      "actual_start": "2026-04-06T10:20:00+10:00",
+      "actual_end": "2026-04-06T11:05:00+10:00",
+      "status": "completed",
+      "patient_arrived_at": "2026-04-06T10:05:00+10:00",
+      "did_not_arrive": false,
+      "cancellation_reason": null,
+      "is_new_patient": false,
+      "referral": {
+        "id": "ref_5010",
+        "referring_doctor": {
+          "title": "Dr",
+          "given_name": "Sarah",
+          "family_name": "Chen",
+          "provider_number": "3456789B",
+          "practice_name": "Surry Hills Medical Centre"
+        },
+        "referral_date": "2026-02-28",
+        "valid_to": "2026-05-28",
+        "referral_reason": "Palpitations, assess cardiac function"
+      },
+      "notes": null,
+      "created_at": "2026-03-15T09:00:00+10:00",
+      "updated_at": "2026-04-06T11:05:00+10:00"
+    },
+    {
+      "id": "appt_20260406_004",
+      "tenant_id": "tnt_roycardiology_001",
+      "patient": {
+        "id": "pat_10312",
+        "title": "Ms",
+        "given_name": "Karen",
+        "family_name": "Thompson",
+        "date_of_birth": "1965-01-08",
+        "gender": "female",
+        "medicare_number": "5678901234",
+        "medicare_irn": "1",
+        "dva_file_number": null,
+        "ihi": "8003608166690506",
+        "contact": {
+          "phone_mobile": "0456789012",
+          "phone_home": null,
+          "email": "karen.t@email.com"
+        },
+        "address": {
+          "line": "5 Wentworth Avenue",
+          "suburb": "Paddington",
+          "state": "NSW",
+          "postcode": "2021"
+        },
+        "concession_type": null,
+        "emergency_contact": {
+          "name": "Mark Thompson",
+          "relationship": "Husband",
+          "phone": "0456789013"
+        }
+      },
+      "practitioner": {
+        "id": "prac_001",
+        "title": "Dr",
+        "given_name": "Andrew",
+        "family_name": "Roy",
+        "provider_number": "2345678A",
+        "specialty": "Cardiology - Interventional"
+      },
+      "location": {
+        "id": "loc_001",
+        "name": "Roy Cardiology - Macquarie Street",
+        "address": "Suite 1201, 135 Macquarie Street, Sydney NSW 2000"
+      },
+      "appointment_type": {
+        "id": "type_stress_echo",
+        "name": "Exercise Stress Echo",
+        "duration_minutes": 60,
+        "colour": "#D94A4A",
+        "category": "procedure"
+      },
+      "scheduled_start": "2026-04-06T11:15:00+10:00",
+      "scheduled_end": "2026-04-06T12:15:00+10:00",
+      "actual_start": null,
+      "actual_end": null,
+      "status": "did_not_arrive",
+      "patient_arrived_at": null,
+      "did_not_arrive": true,
+      "cancellation_reason": null,
+      "is_new_patient": false,
+      "referral": {
+        "id": "ref_4955",
+        "referring_doctor": {
+          "title": "Dr",
+          "given_name": "Robert",
+          "family_name": "Williams",
+          "provider_number": "5678901D",
+          "practice_name": "Woollahra Medical"
+        },
+        "referral_date": "2026-01-10",
+        "valid_to": "2026-04-10",
+        "referral_reason": "Atypical chest pain, assess for ischaemia"
+      },
+      "notes": "DNA - no contact. Referral expiring soon.",
+      "created_at": "2026-02-20T16:00:00+10:00",
+      "updated_at": "2026-04-06T12:30:00+10:00"
+    },
+    {
+      "id": "appt_20260406_005",
+      "tenant_id": "tnt_roycardiology_001",
+      "patient": {
+        "id": "pat_10089",
+        "title": "Mr",
+        "given_name": "Arthur",
+        "family_name": "Walsh",
+        "date_of_birth": "1940-05-18",
+        "gender": "male",
+        "medicare_number": "6789012345",
+        "medicare_irn": "1",
+        "dva_file_number": "NX123456",
+        "ihi": "8003608166690507",
+        "contact": {
+          "phone_mobile": "0467890123",
+          "phone_home": "0276543210",
+          "email": null
+        },
+        "address": {
+          "line": "3 Anzac Parade",
+          "suburb": "Kensington",
+          "state": "NSW",
+          "postcode": "2033"
+        },
+        "concession_type": "dva_gold",
+        "emergency_contact": {
+          "name": "Joan Walsh",
+          "relationship": "Wife",
+          "phone": "0467890124"
+        }
+      },
+      "practitioner": {
+        "id": "prac_001",
+        "title": "Dr",
+        "given_name": "Andrew",
+        "family_name": "Roy",
+        "provider_number": "2345678A",
+        "specialty": "Cardiology - Interventional"
+      },
+      "location": {
+        "id": "loc_001",
+        "name": "Roy Cardiology - Macquarie Street",
+        "address": "Suite 1201, 135 Macquarie Street, Sydney NSW 2000"
+      },
+      "appointment_type": {
+        "id": "type_consult_followup",
+        "name": "Follow-up Consultation",
+        "duration_minutes": 20,
+        "colour": "#7BC47F",
+        "category": "consultation"
+      },
+      "scheduled_start": "2026-04-06T14:00:00+10:00",
+      "scheduled_end": "2026-04-06T14:20:00+10:00",
+      "actual_start": "2026-04-06T14:10:00+10:00",
+      "actual_end": "2026-04-06T14:30:00+10:00",
+      "status": "completed",
+      "patient_arrived_at": "2026-04-06T13:50:00+10:00",
+      "did_not_arrive": false,
+      "cancellation_reason": null,
+      "is_new_patient": false,
+      "referral": {
+        "id": "ref_4700",
+        "referring_doctor": {
+          "title": "Dr",
+          "given_name": "Michael",
+          "family_name": "Peters",
+          "provider_number": "4567890C",
+          "practice_name": "Drummoyne Family Practice"
+        },
+        "referral_date": "2025-06-10",
+        "valid_to": "2026-06-10",
+        "referral_reason": "Post PCI follow-up, dual antiplatelet monitoring"
+      },
+      "notes": "DVA patient. Post PCI 6 months. Stable angina, well controlled on meds.",
+      "created_at": "2026-03-28T10:15:00+10:00",
+      "updated_at": "2026-04-06T14:30:00+10:00"
+    },
+    {
+      "id": "appt_20260406_006",
+      "tenant_id": "tnt_roycardiology_001",
+      "patient": {
+        "id": "pat_10567",
+        "title": "Mrs",
+        "given_name": "Linda",
+        "family_name": "Patel",
+        "date_of_birth": "1978-09-25",
+        "gender": "female",
+        "medicare_number": "7890123456",
+        "medicare_irn": "1",
+        "dva_file_number": null,
+        "ihi": "8003608166690508",
+        "contact": {
+          "phone_mobile": "0478901234",
+          "phone_home": null,
+          "email": "linda.patel@email.com"
+        },
+        "address": {
+          "line": "17/22 Oxford Street",
+          "suburb": "Bondi Junction",
+          "state": "NSW",
+          "postcode": "2022"
+        },
+        "concession_type": null,
+        "emergency_contact": {
+          "name": "Raj Patel",
+          "relationship": "Husband",
+          "phone": "0478901235"
+        }
+      },
+      "practitioner": {
+        "id": "prac_001",
+        "title": "Dr",
+        "given_name": "Andrew",
+        "family_name": "Roy",
+        "provider_number": "2345678A",
+        "specialty": "Cardiology - Interventional"
+      },
+      "location": {
+        "id": "loc_001",
+        "name": "Roy Cardiology - Macquarie Street",
+        "address": "Suite 1201, 135 Macquarie Street, Sydney NSW 2000"
+      },
+      "appointment_type": {
+        "id": "type_consult_followup",
+        "name": "Follow-up Consultation",
+        "duration_minutes": 20,
+        "colour": "#7BC47F",
+        "category": "consultation"
+      },
+      "scheduled_start": "2026-04-06T14:30:00+10:00",
+      "scheduled_end": "2026-04-06T14:50:00+10:00",
+      "actual_start": null,
+      "actual_end": null,
+      "status": "cancelled",
+      "patient_arrived_at": null,
+      "did_not_arrive": false,
+      "cancellation_reason": "Patient called to reschedule - illness",
+      "is_new_patient": false,
+      "referral": {
+        "id": "ref_5005",
+        "referring_doctor": {
+          "title": "Dr",
+          "given_name": "Sarah",
+          "family_name": "Chen",
+          "provider_number": "3456789B",
+          "practice_name": "Surry Hills Medical Centre"
+        },
+        "referral_date": "2026-02-20",
+        "valid_to": "2026-05-20",
+        "referral_reason": "Mitral valve prolapse monitoring"
+      },
+      "notes": "Patient cancelled morning of. Rescheduled to 2026-04-13.",
+      "created_at": "2026-03-01T09:30:00+10:00",
+      "updated_at": "2026-04-06T08:15:00+10:00"
+    },
+    {
+      "id": "appt_20260406_007",
+      "tenant_id": "tnt_roycardiology_001",
+      "patient": {
+        "id": "pat_10678",
+        "title": "Mr",
+        "given_name": "Steven",
+        "family_name": "Park",
+        "date_of_birth": "1982-12-03",
+        "gender": "male",
+        "medicare_number": "8901234567",
+        "medicare_irn": "1",
+        "dva_file_number": null,
+        "ihi": "8003608166690509",
+        "contact": {
+          "phone_mobile": "0489012345",
+          "phone_home": null,
+          "email": "s.park@corporate.com.au"
+        },
+        "address": {
+          "line": "Level 8, 100 George Street",
+          "suburb": "Sydney",
+          "state": "NSW",
+          "postcode": "2000"
+        },
+        "concession_type": null,
+        "emergency_contact": {
+          "name": "Julie Park",
+          "relationship": "Wife",
+          "phone": "0489012346"
+        }
+      },
+      "practitioner": {
+        "id": "prac_001",
+        "title": "Dr",
+        "given_name": "Andrew",
+        "family_name": "Roy",
+        "provider_number": "2345678A",
+        "specialty": "Cardiology - Interventional"
+      },
+      "location": {
+        "id": "loc_001",
+        "name": "Roy Cardiology - Macquarie Street",
+        "address": "Suite 1201, 135 Macquarie Street, Sydney NSW 2000"
+      },
+      "appointment_type": {
+        "id": "type_consult_init",
+        "name": "Initial Consultation",
+        "duration_minutes": 45,
+        "colour": "#4A90D9",
+        "category": "consultation"
+      },
+      "scheduled_start": "2026-04-06T15:00:00+10:00",
+      "scheduled_end": "2026-04-06T15:45:00+10:00",
+      "actual_start": "2026-04-06T15:00:00+10:00",
+      "actual_end": "2026-04-06T15:35:00+10:00",
+      "status": "completed",
+      "patient_arrived_at": "2026-04-06T14:48:00+10:00",
+      "did_not_arrive": false,
+      "cancellation_reason": null,
+      "is_new_patient": true,
+      "referral": {
+        "id": "ref_5030",
+        "referring_doctor": {
+          "title": "Dr",
+          "given_name": "Emma",
+          "family_name": "Taylor",
+          "provider_number": "6789012E",
+          "practice_name": "CBD Medical Group"
+        },
+        "referral_date": "2026-03-28",
+        "valid_to": "2026-06-28",
+        "referral_reason": "Hypertension resistant to treatment, assess for secondary causes"
+      },
+      "notes": "Young male with resistant HTN. Needs renal artery duplex and bloods.",
+      "created_at": "2026-03-30T11:45:00+10:00",
+      "updated_at": "2026-04-06T15:35:00+10:00"
+    },
+    {
+      "id": "appt_20260407_001",
+      "tenant_id": "tnt_roycardiology_001",
+      "patient": {
+        "id": "pat_10789",
+        "title": "Mr",
+        "given_name": "George",
+        "family_name": "Constantinos",
+        "date_of_birth": "1955-04-12",
+        "gender": "male",
+        "medicare_number": "9012345678",
+        "medicare_irn": "1",
+        "dva_file_number": null,
+        "ihi": "8003608166690510",
+        "contact": {
+          "phone_mobile": "0490123456",
+          "phone_home": "0265432109",
+          "email": "george.c@email.com"
+        },
+        "address": {
+          "line": "33 Homer Street",
+          "suburb": "Earlwood",
+          "state": "NSW",
+          "postcode": "2206"
+        },
+        "concession_type": null,
+        "emergency_contact": {
+          "name": "Maria Constantinos",
+          "relationship": "Wife",
+          "phone": "0490123457"
+        }
+      },
+      "practitioner": {
+        "id": "prac_001",
+        "title": "Dr",
+        "given_name": "Andrew",
+        "family_name": "Roy",
+        "provider_number": "2345678A",
+        "specialty": "Cardiology - Interventional"
+      },
+      "location": {
+        "id": "loc_001",
+        "name": "Roy Cardiology - Macquarie Street",
+        "address": "Suite 1201, 135 Macquarie Street, Sydney NSW 2000"
+      },
+      "appointment_type": {
+        "id": "type_consult_init",
+        "name": "Initial Consultation",
+        "duration_minutes": 45,
+        "colour": "#4A90D9",
+        "category": "consultation"
+      },
+      "scheduled_start": "2026-04-07T09:00:00+10:00",
+      "scheduled_end": "2026-04-07T09:45:00+10:00",
+      "actual_start": null,
+      "actual_end": null,
+      "status": "booked",
+      "patient_arrived_at": null,
+      "did_not_arrive": false,
+      "cancellation_reason": null,
+      "is_new_patient": true,
+      "referral": {
+        "id": "ref_5035",
+        "referring_doctor": {
+          "title": "Dr",
+          "given_name": "James",
+          "family_name": "Anderson",
+          "provider_number": "7890123F",
+          "practice_name": "Canterbury Road Medical"
+        },
+        "referral_date": "2026-04-01",
+        "valid_to": "2026-07-01",
+        "referral_reason": "Syncope, query arrhythmia"
+      },
+      "notes": null,
+      "created_at": "2026-04-02T14:00:00+10:00",
+      "updated_at": "2026-04-02T14:00:00+10:00"
+    }
+  ]
+}
