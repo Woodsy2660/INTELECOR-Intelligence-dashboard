@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Intelecor - Documents</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#e5e7ed",
+                        "primary": "#6366f1",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#2e3040",
+                        "tertiary-fixed": "#ede9fe",
+                        "surface-container-high": "#dcdee4",
+                        "error-container": "#fee2e2",
+                        "secondary-fixed": "#d8dae6",
+                        "tertiary-fixed-dim": "#c4b5fd",
+                        "primary-container": "#818cf8",
+                        "tertiary": "#7c3aed",
+                        "surface-tint": "#6366f1",
+                        "on-secondary-container": "#585a68",
+                        "secondary": "#6c6e7e",
+                        "on-primary-container": "#e0e2ff",
+                        "surface-container": "#e2e4ea",
+                        "surface-dim": "#d4d6dc",
+                        "outline-variant": "#d0d2dc",
+                        "surface-bright": "#edeef4",
+                        "tertiary-container": "#a78bfa",
+                        "error": "#dc2626",
+                        "secondary-fixed-dim": "#b8baca",
+                        "on-error-container": "#991b1b",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#2e1065",
+                        "on-surface-variant": "#585a68",
+                        "on-surface": "#2e3040",
+                        "primary-fixed-dim": "#a5b4fc",
+                        "on-secondary-fixed": "#1a1b26",
+                        "surface-container-lowest": "#f0f2f8",
+                        "primary-fixed": "#e0e2ff",
+                        "on-primary-fixed": "#1e1b4b",
+                        "inverse-primary": "#a5b4fc",
+                        "on-tertiary-container": "#3b1f63",
+                        "surface-variant": "#dcdee4",
+                        "inverse-surface": "#2e3040",
+                        "background": "#e8eaf0",
+                        "secondary-container": "#d8dae6",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#e8eaf0",
+                        "on-tertiary-fixed-variant": "#5b21b6",
+                        "on-primary-fixed-variant": "#4338ca",
+                        "outline": "#8a8c9a",
+                        "surface-container-highest": "#d6d8de",
+                        "inverse-on-surface": "#e8eaf0",
+                        "on-secondary-fixed-variant": "#404252"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e8eaf0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #2e3040;
+        }
+
+        .neo-raised {
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.08), -6px -6px 12px rgba(255, 255, 255, 0.6);
+        }
+
+        .neo-inset {
+            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.06), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="flex min-h-screen">
+    <!-- SideNavBar Component -->
+    <aside
+        class="flex flex-col h-full p-6 space-y-4 h-screen w-64 rounded-r-2xl bg-[#e8eaf0] dark:bg-slate-900 no-border shadow-[6px_0_12px_rgba(0,0,0,0.08)] sticky top-0">
+        <div class="mb-8 px-2">
+            <span class="text-xl font-semibold tracking-tight text-indigo-600 dark:text-indigo-400">INTELECOR</span>
+        </div>
+        <nav class="space-y-4">
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all font-plus-jakarta-sans font-medium text-sm text-slate-500 hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)]"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                <span>Overview</span>
+            </a>
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all font-plus-jakarta-sans font-medium text-sm text-slate-500 hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)]"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+                <span>Financial</span>
+            </a>
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all font-plus-jakarta-sans font-medium text-sm text-slate-500 hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)]"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="hub">hub</span>
+                <span>Operations</span>
+            </a>
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all font-plus-jakarta-sans font-medium text-sm shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] text-indigo-600 font-semibold"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="description">description</span>
+                <span>Documents</span>
+            </a>
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all font-plus-jakarta-sans font-medium text-sm text-slate-500 hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)]"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+    <main class="flex-1 flex flex-col min-w-0">
+        <!-- TopAppBar Component -->
+        <header
+            class="flex items-center justify-between px-8 w-full h-20 bg-[#e8eaf0] dark:bg-slate-900 no-border shadow-[0_4px_12px_rgba(0,0,0,0.03)] sticky top-0 z-10">
+            <div class="flex items-center gap-6">
+                <h1 class="font-plus-jakarta-sans font-semibold text-lg text-slate-800">Documents</h1>
+                <div
+                    class="neo-inset px-4 py-2 rounded-full flex items-center space-x-3 bg-[#e8eaf0] w-64 focus-within:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06)]">
+                    <span class="material-symbols-outlined text-slate-400 text-xl" data-icon="search">search</span>
+                    <input
+                        class="bg-transparent border-none focus:ring-0 text-sm text-slate-600 w-full placeholder:text-slate-400"
+                        placeholder="Search documents..." type="text" />
+                </div>
+            </div>
+            <div class="flex items-center space-x-6">
+                <button class="material-symbols-outlined text-slate-400 hover:text-indigo-500 transition-all"
+                    data-icon="calendar_today">calendar_today</button>
+                <button class="material-symbols-outlined text-slate-400 hover:text-indigo-500 transition-all relative"
+                    data-icon="notifications">
+                    notifications
+                    <span
+                        class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-indigo-500 ring-2 ring-[#e8eaf0]"></span>
+                </button>
+            </div>
+        </header>
+        <section class="p-8 space-y-8">
+            <!-- Row 1: Headline Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="neo-raised p-6 rounded-xl bg-[#e8eaf0] flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-on-surface-variant font-medium text-sm">Unsigned Letters</span>
+                        <div class="neo-inset p-2 rounded-lg">
+                            <span class="material-symbols-outlined text-indigo-600" data-icon="draw">draw</span>
+                        </div>
+                    </div>
+                    <div class="flex items-baseline space-x-2">
+                        <span class="text-4xl font-semibold text-on-surface">12</span>
+                        <span class="text-xs font-medium text-error px-2 py-0.5 rounded-full neo-inset bg-[#e8eaf0]">+2
+                            today</span>
+                    </div>
+                </div>
+                <div class="neo-raised p-6 rounded-xl bg-[#e8eaf0] flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-on-surface-variant font-medium text-sm">Signed but Unsent</span>
+                        <div class="neo-inset p-2 rounded-lg">
+                            <span class="material-symbols-outlined text-indigo-600"
+                                data-icon="outgoing_mail">outgoing_mail</span>
+                        </div>
+                    </div>
+                    <div class="flex items-baseline space-x-2">
+                        <span class="text-4xl font-semibold text-on-surface">4</span>
+                        <span
+                            class="text-xs font-medium text-slate-500 px-2 py-0.5 rounded-full neo-inset bg-[#e8eaf0]">Critical
+                            priority</span>
+                    </div>
+                </div>
+                <div class="neo-raised p-6 rounded-xl bg-[#e8eaf0] flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-on-surface-variant font-medium text-sm">Avg Days to Sign</span>
+                        <div class="neo-inset p-2 rounded-lg">
+                            <span class="material-symbols-outlined text-indigo-600" data-icon="speed">speed</span>
+                        </div>
+                    </div>
+                    <div class="flex items-baseline space-x-2">
+                        <span class="text-4xl font-semibold text-on-surface">3.2</span>
+                        <span
+                            class="text-xs font-medium text-primary px-2 py-0.5 rounded-full neo-inset bg-[#e8eaf0]">-0.5
+                            vs avg</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2: Charts -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Unsigned letters by age -->
+                <div class="neo-raised p-6 rounded-xl bg-[#e8eaf0]">
+                    <h3 class="font-semibold text-on-surface mb-6">Unsigned letters by age</h3>
+                    <div class="flex items-end justify-between h-48 space-x-4">
+                        <div class="flex flex-col items-center flex-1 space-y-2">
+                            <div class="w-full neo-inset rounded-lg overflow-hidden flex flex-col justify-end h-full">
+                                <div class="bg-primary/20 h-2/3 w-full rounded-t-lg"></div>
+                            </div>
+                            <span class="text-[10px] text-on-surface-variant">0-2d</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1 space-y-2">
+                            <div class="w-full neo-inset rounded-lg overflow-hidden flex flex-col justify-end h-full">
+                                <div class="bg-primary/40 h-1/2 w-full rounded-t-lg"></div>
+                            </div>
+                            <span class="text-[10px] text-on-surface-variant">3-5d</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1 space-y-2">
+                            <div class="w-full neo-inset rounded-lg overflow-hidden flex flex-col justify-end h-full">
+                                <div class="bg-primary/60 h-1/3 w-full rounded-t-lg"></div>
+                            </div>
+                            <span class="text-[10px] text-on-surface-variant">6-10d</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1 space-y-2">
+                            <div class="w-full neo-inset rounded-lg overflow-hidden flex flex-col justify-end h-full">
+                                <div class="bg-error/40 h-1/5 w-full rounded-t-lg"></div>
+                            </div>
+                            <span class="text-[10px] text-on-surface-variant">10d+</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Backlog trend -->
+                <div class="neo-raised p-6 rounded-xl bg-[#e8eaf0]">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-semibold text-on-surface">Backlog trend</h3>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center space-x-1">
+                                <span class="h-2 w-2 rounded-full bg-indigo-400"></span>
+                                <span class="text-[10px] text-on-surface-variant">Created</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <span class="h-2 w-2 rounded-full bg-violet-400"></span>
+                                <span class="text-[10px] text-on-surface-variant">Signed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-end justify-between h-48 space-x-6">
+                        <!-- Week 1 -->
+                        <div class="flex-1 flex flex-col items-center space-y-2 h-full justify-end">
+                            <div class="flex space-x-1 items-end h-full w-full">
+                                <div
+                                    class="flex-1 neo-inset rounded-t-md bg-[#e8eaf0] relative h-[70%] overflow-hidden">
+                                    <div class="absolute bottom-0 w-full bg-indigo-400 h-full"></div>
+                                </div>
+                                <div
+                                    class="flex-1 neo-inset rounded-t-md bg-[#e8eaf0] relative h-[60%] overflow-hidden">
+                                    <div class="absolute bottom-0 w-full bg-violet-400 h-full"></div>
+                                </div>
+                            </div>
+                            <span class="text-[10px] text-on-surface-variant uppercase">W1</span>
+                        </div>
+                        <!-- Week 2 -->
+                        <div class="flex-1 flex flex-col items-center space-y-2 h-full justify-end">
+                            <div class="flex space-x-1 items-end h-full w-full">
+                                <div
+                                    class="flex-1 neo-inset rounded-t-md bg-[#e8eaf0] relative h-[85%] overflow-hidden">
+                                    <div class="absolute bottom-0 w-full bg-indigo-400 h-full"></div>
+                                </div>
+                                <div
+                                    class="flex-1 neo-inset rounded-t-md bg-[#e8eaf0] relative h-[75%] overflow-hidden">
+                                    <div class="absolute bottom-0 w-full bg-violet-400 h-full"></div>
+                                </div>
+                            </div>
+                            <span class="text-[10px] text-on-surface-variant uppercase">W2</span>
+                        </div>
+                        <!-- Week 3 -->
+                        <div class="flex-1 flex flex-col items-center space-y-2 h-full justify-end">
+                            <div class="flex space-x-1 items-end h-full w-full">
+                                <div
+                                    class="flex-1 neo-inset rounded-t-md bg-[#e8eaf0] relative h-[65%] overflow-hidden">
+                                    <div class="absolute bottom-0 w-full bg-indigo-400 h-full"></div>
+                                </div>
+                                <div
+                                    class="flex-1 neo-inset rounded-t-md bg-[#e8eaf0] relative h-[80%] overflow-hidden">
+                                    <div class="absolute bottom-0 w-full bg-violet-400 h-full"></div>
+                                </div>
+                            </div>
+                            <span class="text-[10px] text-on-surface-variant uppercase">W3</span>
+                        </div>
+                        <!-- Week 4 -->
+                        <div class="flex-1 flex flex-col items-center space-y-2 h-full justify-end">
+                            <div class="flex space-x-1 items-end h-full w-full">
+                                <div
+                                    class="flex-1 neo-inset rounded-t-md bg-[#e8eaf0] relative h-[90%] overflow-hidden">
+                                    <div class="absolute bottom-0 w-full bg-indigo-400 h-full"></div>
+                                </div>
+                                <div
+                                    class="flex-1 neo-inset rounded-t-md bg-[#e8eaf0] relative h-[40%] overflow-hidden">
+                                    <div class="absolute bottom-0 w-full bg-violet-400 h-full"></div>
+                                </div>
+                            </div>
+                            <span class="text-[10px] text-on-surface-variant uppercase">W4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 3: Unsigned Letter Queue Table -->
+            <div class="neo-raised rounded-xl bg-[#e8eaf0] overflow-hidden">
+                <div class="p-6 border-b border-white/20 flex items-center justify-between">
+                    <h3 class="font-semibold text-on-surface">Unsigned Letter Queue</h3>
+                    <button
+                        class="neo-raised px-4 py-2 rounded-lg text-sm font-medium text-indigo-600 active:scale-95 transition-all">View
+                        All</button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="text-on-surface-variant text-xs uppercase tracking-wider">
+                                <th class="px-6 py-4 font-medium">Patient</th>
+                                <th class="px-6 py-4 font-medium">Type</th>
+                                <th class="px-6 py-4 font-medium">Recipient</th>
+                                <th class="px-6 py-4 font-medium">Date</th>
+                                <th class="px-6 py-4 font-medium">Days Waiting</th>
+                                <th class="px-6 py-4 font-medium text-right">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/10">
+                            <tr class="hover:bg-white/10 transition-colors group">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center space-x-3">
+                                        <div
+                                            class="h-8 w-8 rounded-full neo-inset flex items-center justify-center text-indigo-600 font-bold text-xs">
+                                            JH</div>
+                                        <span class="text-sm font-medium">James Harrison</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm">Consultation Report</td>
+                                <td class="px-6 py-4 text-sm text-on-surface-variant">Dr. Sarah Miller</td>
+                                <td class="px-6 py-4 text-sm text-on-surface-variant">Oct 24, 2023</td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="px-2 py-1 rounded-full neo-inset bg-error-container text-error text-[10px] font-bold">8
+                                        DAYS</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span class="text-xs neo-inset px-2 py-1 rounded text-on-surface-variant">Internal
+                                        Portal</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/10 transition-colors group">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center space-x-3">
+                                        <div
+                                            class="h-8 w-8 rounded-full neo-inset flex items-center justify-center text-indigo-600 font-bold text-xs">
+                                            EK</div>
+                                        <span class="text-sm font-medium">Elena Kovacs</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm">Procedure Report</td>
+                                <td class="px-6 py-4 text-sm text-on-surface-variant">Neurology Dept.</td>
+                                <td class="px-6 py-4 text-sm text-on-surface-variant">Oct 28, 2023</td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="px-2 py-1 rounded-full neo-inset bg-surface-container text-on-surface-variant text-[10px] font-bold">4
+                                        DAYS</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span class="text-xs neo-inset px-2 py-1 rounded text-on-surface-variant">Dictation
+                                        System</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/10 transition-colors group">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center space-x-3">
+                                        <div
+                                            class="h-8 w-8 rounded-full neo-inset flex items-center justify-center text-indigo-600 font-bold text-xs">
+                                            MT</div>
+                                        <span class="text-sm font-medium">Marcus Thorne</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm">Referral Letter</td>
+                                <td class="px-6 py-4 text-sm text-on-surface-variant">Community Pharmacy</td>
+                                <td class="px-6 py-4 text-sm text-on-surface-variant">Oct 31, 2023</td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="px-2 py-1 rounded-full neo-inset bg-primary/10 text-primary text-[10px] font-bold">1
+                                        DAY</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span class="text-xs neo-inset px-2 py-1 rounded text-on-surface-variant">EMR
+                                        Direct</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/10 transition-colors group">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center space-x-3">
+                                        <div
+                                            class="h-8 w-8 rounded-full neo-inset flex items-center justify-center text-indigo-600 font-bold text-xs">
+                                            AL</div>
+                                        <span class="text-sm font-medium">Alice Lowery</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm">Discharge Summary</td>
+                                <td class="px-6 py-4 text-sm text-on-surface-variant">GP Clinic</td>
+                                <td class="px-6 py-4 text-sm text-on-surface-variant">Nov 02, 2023</td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="px-2 py-1 rounded-full neo-inset bg-primary/10 text-primary text-[10px] font-bold">0
+                                        DAYS</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span class="text-xs neo-inset px-2 py-1 rounded text-on-surface-variant">Dictation
+                                        System</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Row 4: Pipeline Over Time Area Chart -->
+            <div class="neo-raised p-6 rounded-xl bg-[#e8eaf0]">
+                <div class="flex items-center justify-between mb-8">
+                    <div>
+                        <h3 class="font-semibold text-on-surface">Correspondence pipeline over time</h3>
+                        <p class="text-xs text-on-surface-variant mt-1">8-week stacked volume analysis</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="h-3 w-3 rounded-full bg-indigo-500"></span>
+                            <span class="text-xs text-on-surface-variant">Created</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="h-3 w-3 rounded-full bg-violet-400"></span>
+                            <span class="text-xs text-on-surface-variant">Signed</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="h-3 w-3 rounded-full bg-slate-400"></span>
+                            <span class="text-xs text-on-surface-variant">Sent</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-64 w-full neo-inset rounded-xl p-4 flex items-end">
+                    <!-- Grid Lines Mockup -->
+                    <div class="absolute inset-0 flex flex-col justify-between p-4 pointer-events-none opacity-20">
+                        <div class="border-t border-slate-900 w-full"></div>
+                        <div class="border-t border-slate-900 w-full"></div>
+                        <div class="border-t border-slate-900 w-full"></div>
+                        <div class="border-t border-slate-900 w-full"></div>
+                    </div>
+                    <!-- Area Chart Visual Representation -->
+                    <div class="relative w-full h-full flex items-end">
+                        <svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 200">
+                            <!-- Background fill Created (Bottom Layer) -->
+                            <path
+                                d="M0,200 L0,80 C100,100 200,60 300,90 C400,120 500,70 600,100 C700,130 800,90 L800,200 Z"
+                                fill="#6366f1" fill-opacity="0.4"></path>
+                            <!-- Background fill Signed (Middle Layer) -->
+                            <path
+                                d="M0,200 L0,110 C100,130 200,90 300,120 C400,150 500,100 600,130 C700,160 800,120 L800,200 Z"
+                                fill="#a78bfa" fill-opacity="0.4"></path>
+                            <!-- Background fill Sent (Top Layer) -->
+                            <path
+                                d="M0,200 L0,140 C100,160 200,120 300,150 C400,180 500,130 600,160 C700,190 800,150 L800,200 Z"
+                                fill="#94a3b8" fill-opacity="0.4"></path>
+                            <!-- Lines -->
+                            <path d="M0,80 C100,100 200,60 300,90 C400,120 500,70 600,100 C700,130 800,90" fill="none"
+                                stroke="#6366f1" stroke-width="2.5"></path>
+                            <path d="M0,110 C100,130 200,90 300,120 C400,150 500,100 600,130 C700,160 800,120"
+                                fill="none" stroke="#a78bfa" stroke-width="2.5"></path>
+                            <path d="M0,140 C100,160 200,120 300,150 C400,180 500,130 600,160 C700,190 800,150"
+                                fill="none" stroke="#94a3b8" stroke-width="2.5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between mt-4 px-4 text-[10px] text-on-surface-variant font-medium uppercase tracking-tighter">
+                    <span>Aug 21</span>
+                    <span>Aug 28</span>
+                    <span>Sep 04</span>
+                    <span>Sep 11</span>
+                    <span>Sep 18</span>
+                    <span>Sep 25</span>
+                    <span>Oct 02</span>
+                    <span>Oct 09</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ':*)",
+      "Bash(python -m celery -A services.celery_app control shutdown)",
+      "Bash(taskkill /PID 32560 /F)",
+      "Bash(cmd /c \"taskkill /PID 32560 /F\")",
+      "Bash(npm --version)"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m db.seed)",
+      "Bash(\"../venv/Scripts/python.exe\" -m db.seed)",
+      "Bash(cmd /c \"dir /b /s \\\\\"c:\\\\Gentu Intelligence dashboard project\\\\INTELECOR-Intelligence-dashboard\\\\intelecor-project\\\\venv\\\\\"\")",
+      "Bash(python -c \"import sqlalchemy; print\\(sqlalchemy.__version__\\)\")",
+      "Bash(pip install:*)",
+      "Bash(xargs ls:*)",
+      "Bash(python scripts/run_pipeline.py)",
+      "Bash(python -c \"import uvicorn; print\\(uvicorn.__version__\\)\")"
+    ]
+  }
+}

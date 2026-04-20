@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#e5e7ed",
+                        "primary": "#6366f1",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#2e3040",
+                        "tertiary-fixed": "#ede9fe",
+                        "surface-container-high": "#dcdee4",
+                        "error-container": "#fee2e2",
+                        "secondary-fixed": "#d8dae6",
+                        "tertiary-fixed-dim": "#c4b5fd",
+                        "primary-container": "#818cf8",
+                        "tertiary": "#7c3aed",
+                        "surface-tint": "#6366f1",
+                        "on-secondary-container": "#585a68",
+                        "secondary": "#6c6e7e",
+                        "on-primary-container": "#e0e2ff",
+                        "surface-container": "#e2e4ea",
+                        "surface-dim": "#d4d6dc",
+                        "outline-variant": "#d0d2dc",
+                        "surface-bright": "#edeef4",
+                        "tertiary-container": "#a78bfa",
+                        "error": "#dc2626",
+                        "secondary-fixed-dim": "#b8baca",
+                        "on-error-container": "#991b1b",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#2e1065",
+                        "on-surface-variant": "#585a68",
+                        "on-surface": "#2e3040",
+                        "primary-fixed-dim": "#a5b4fc",
+                        "on-secondary-fixed": "#1a1b26",
+                        "surface-container-lowest": "#f0f2f8",
+                        "primary-fixed": "#e0e2ff",
+                        "on-primary-fixed": "#1e1b4b",
+                        "inverse-primary": "#a5b4fc",
+                        "on-tertiary-container": "#3b1f63",
+                        "surface-variant": "#dcdee4",
+                        "inverse-surface": "#2e3040",
+                        "background": "#e8eaf0",
+                        "secondary-container": "#d8dae6",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#e8eaf0",
+                        "on-tertiary-fixed-variant": "#5b21b6",
+                        "on-primary-fixed-variant": "#4338ca",
+                        "outline": "#8a8c9a",
+                        "surface-container-highest": "#d6d8de",
+                        "inverse-on-surface": "#e8eaf0",
+                        "on-secondary-fixed-variant": "#404252"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .neomorph-raised {
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.08), -6px -6px 12px rgba(255, 255, 255, 0.6);
+        }
+
+        .neomorph-inset {
+            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.06), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface flex min-h-screen">
+    <!-- SideNavBar -->
+    <aside
+        class="h-screen w-64 rounded-r-2xl bg-[#e8eaf0] dark:bg-slate-900 flex flex-col p-6 space-y-4 no-border shadow-[6px_0_12px_rgba(0,0,0,0.08)] sticky top-0">
+        <div class="text-xl font-semibold tracking-tight text-indigo-600 dark:text-indigo-400 mb-8 uppercase">INTELECOR
+        </div>
+        <nav class="space-y-4 flex-1">
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] text-slate-500 dark:text-slate-400 font-plus-jakarta-sans text-sm"
+                href="#">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span>Overview</span>
+            </a>
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] text-indigo-600 font-semibold font-plus-jakarta-sans text-sm"
+                href="#">
+                <span class="material-symbols-outlined">payments</span>
+                <span>Financial</span>
+            </a>
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] text-slate-500 dark:text-slate-400 font-plus-jakarta-sans text-sm"
+                href="#">
+                <span class="material-symbols-outlined">account_tree</span>
+                <span>Operations</span>
+            </a>
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] text-slate-500 dark:text-slate-400 font-plus-jakarta-sans text-sm"
+                href="#">
+                <span class="material-symbols-outlined">description</span>
+                <span>Documents</span>
+            </a>
+            <a class="flex items-center space-x-3 p-3 rounded-xl transition-all hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] text-slate-500 dark:text-slate-400 font-plus-jakarta-sans text-sm"
+                href="#">
+                <span class="material-symbols-outlined">settings</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+    <main class="flex-1 flex flex-col min-w-0">
+        <!-- TopAppBar -->
+        <header
+            class="w-full h-20 bg-[#e8eaf0] dark:bg-slate-900 flex items-center justify-between px-8 no-border shadow-[0_4px_12px_rgba(0,0,0,0.03)] sticky top-0 z-10">
+            <div class="flex items-center space-x-6 flex-1">
+                <h1 class="font-plus-jakarta-sans font-extrabold text-2xl text-on-surface tracking-tight">Financial
+                    Analytics</h1>
+                <div
+                    class="neomorph-inset flex items-center px-4 py-2 rounded-full w-96 max-w-md focus-within:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06)]">
+                    <span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm w-full font-plus-jakarta-sans"
+                        placeholder="Search analytics..." type="text" />
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 rounded-full neomorph-raised hover:text-indigo-500 transition-all text-slate-400">
+                    <span class="material-symbols-outlined">calendar_today</span>
+                </button>
+                <button
+                    class="p-2 rounded-full neomorph-raised hover:text-indigo-500 transition-all text-slate-400 relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+                </button>
+            </div>
+        </header>
+        <div class="p-8 space-y-8">
+            <!-- Row 1: Headline Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="neomorph-raised p-6 rounded-2xl flex flex-col">
+                    <span class="text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Total Billed</span>
+                    <div class="flex items-baseline justify-between">
+                        <span class="text-2xl font-extrabold text-on-surface">$28,400</span>
+                        <span class="text-xs font-bold text-primary">+12%</span>
+                    </div>
+                </div>
+                <div class="neomorph-raised p-6 rounded-2xl flex flex-col">
+                    <span class="text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Total
+                        Received</span>
+                    <div class="flex items-baseline justify-between">
+                        <span class="text-2xl font-extrabold text-on-surface">$24,500</span>
+                        <span class="text-xs font-bold text-primary">+8%</span>
+                    </div>
+                </div>
+                <div class="neomorph-raised p-6 rounded-2xl flex flex-col">
+                    <span class="text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Total
+                        Outstanding</span>
+                    <div class="flex items-baseline justify-between">
+                        <span class="text-2xl font-extrabold text-error">$3,900</span>
+                        <div class="flex items-center space-x-1 text-error">
+                            <span class="material-symbols-outlined text-sm font-bold">warning</span>
+                            <span class="text-xs font-bold">+5%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="neomorph-raised p-6 rounded-2xl flex flex-col">
+                    <span class="text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Collection
+                        Rate</span>
+                    <div class="flex items-baseline justify-between">
+                        <span class="text-2xl font-extrabold text-tertiary">86.3%</span>
+                        <div class="w-16 h-2 bg-surface-container-high rounded-full overflow-hidden">
+                            <div class="h-full bg-tertiary" style="width: 86.3%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2: Revenue Distribution -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Revenue by Billing Type -->
+                <div class="neomorph-raised p-6 rounded-2xl">
+                    <h3 class="font-bold text-on-surface mb-6 flex items-center">
+                        <span class="material-symbols-outlined mr-2 text-indigo-500">account_balance_wallet</span>
+                        Revenue by Billing Type
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-on-surface-variant">Private</span>
+                                <span class="text-on-surface font-bold">$9,200</span>
+                            </div>
+                            <div class="neomorph-inset h-2.5 rounded-full overflow-hidden p-0.5">
+                                <div class="h-full bg-tertiary rounded-full" style="width: 32%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-on-surface-variant">Bulk Bill</span>
+                                <span class="text-on-surface font-bold">$12,400</span>
+                            </div>
+                            <div class="neomorph-inset h-2.5 rounded-full overflow-hidden p-0.5">
+                                <div class="h-full bg-indigo-500 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-on-surface-variant">DVA</span>
+                                <span class="text-on-surface font-bold">$2,800</span>
+                            </div>
+                            <div class="neomorph-inset h-2.5 rounded-full overflow-hidden p-0.5">
+                                <div class="h-full bg-primary-container rounded-full" style="width: 12%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-on-surface-variant">ECLIPSE No-Gap</span>
+                                <span class="text-on-surface font-bold">$3,100</span>
+                            </div>
+                            <div class="neomorph-inset h-2.5 rounded-full overflow-hidden p-0.5">
+                                <div class="h-full bg-indigo-300 rounded-full" style="width: 15%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-on-surface-variant">ECLIPSE Known-Gap</span>
+                                <span class="text-on-surface font-bold">$1,900</span>
+                            </div>
+                            <div class="neomorph-inset h-2.5 rounded-full overflow-hidden p-0.5">
+                                <div class="h-full bg-slate-400 rounded-full" style="width: 8%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Revenue by MBS Item -->
+                <div class="neomorph-raised p-6 rounded-2xl">
+                    <h3 class="font-bold text-on-surface mb-6 flex items-center">
+                        <span class="material-symbols-outlined mr-2 text-indigo-500">medical_services</span>
+                        Revenue by MBS Item
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1">
+                                <span class="text-[11px] font-bold text-on-surface-variant block mb-1">110 (Initial
+                                    consultation)</span>
+                                <div class="neomorph-inset h-2.5 rounded-full p-0.5 overflow-hidden">
+                                    <div class="h-full bg-indigo-400 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-on-surface mt-4 w-14 text-right">$8,250</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1">
+                                <span class="text-[11px] font-bold text-on-surface-variant block mb-1">116 (Subsequent
+                                    attendance)</span>
+                                <div class="neomorph-inset h-2.5 rounded-full p-0.5 overflow-hidden">
+                                    <div class="h-full bg-indigo-400 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-on-surface mt-4 w-14 text-right">$6,100</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1">
+                                <span class="text-[11px] font-bold text-on-surface-variant block mb-1">55126
+                                    (Transthoracic echo)</span>
+                                <div class="neomorph-inset h-2.5 rounded-full p-0.5 overflow-hidden">
+                                    <div class="h-full bg-indigo-400 rounded-full" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-on-surface mt-4 w-14 text-right">$4,200</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1">
+                                <span class="text-[11px] font-bold text-on-surface-variant block mb-1">55141 (Exercise
+                                    stress echo)</span>
+                                <div class="neomorph-inset h-2.5 rounded-full p-0.5 overflow-hidden">
+                                    <div class="h-full bg-indigo-400 rounded-full" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-on-surface mt-4 w-14 text-right">$2,950</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1">
+                                <span class="text-[11px] font-bold text-on-surface-variant block mb-1">11700 (ECG 12
+                                    lead)</span>
+                                <div class="neomorph-inset h-2.5 rounded-full p-0.5 overflow-hidden">
+                                    <div class="h-full bg-indigo-400 rounded-full" style="width: 15%"></div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-on-surface mt-4 w-14 text-right">$1,200</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1">
+                                <span class="text-[11px] font-bold text-on-surface-variant block mb-1">91824 (Telehealth
+                                    video)</span>
+                                <div class="neomorph-inset h-2.5 rounded-full p-0.5 overflow-hidden">
+                                    <div class="h-full bg-indigo-400 rounded-full" style="width: 10%"></div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-on-surface mt-4 w-14 text-right">$850</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 3: Items Requiring Attention -->
+            <div class="neomorph-raised p-8 rounded-2xl">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-bold text-on-surface text-lg flex items-center">
+                        <span class="material-symbols-outlined mr-2 text-error">warning</span>
+                        Items requiring attention
+                    </h3>
+                    <button
+                        class="text-sm font-semibold text-primary px-4 py-2 rounded-xl neomorph-raised hover:scale-95 transition-all">Export
+                        Report</button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr
+                                class="text-xs text-on-surface-variant uppercase tracking-widest border-b border-outline-variant/30">
+                                <th class="pb-4 font-semibold px-2">Flag</th>
+                                <th class="pb-4 font-semibold">Type</th>
+                                <th class="pb-4 font-semibold">ID</th>
+                                <th class="pb-4 font-semibold">Patient</th>
+                                <th class="pb-4 font-semibold">Date</th>
+                                <th class="pb-4 font-semibold text-center">Reference</th>
+                                <th class="pb-4 font-semibold text-right">Amount</th>
+                                <th class="pb-4 font-semibold pl-4">Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr class="group hover:bg-surface-container-lowest transition-colors">
+                                <td class="py-4 px-2"><span class="w-2.5 h-2.5 bg-error rounded-full block"></span></td>
+                                <td class="py-4 font-semibold text-error">Rejected claim</td>
+                                <td class="py-4 font-bold text-indigo-600">#INV-9201</td>
+                                <td class="py-4 font-medium">Jamal Harrison</td>
+                                <td class="py-4 text-on-surface-variant">Oct 12, 2023</td>
+                                <td class="py-4 text-center font-mono">116</td>
+                                <td class="py-4 text-right font-bold">$76.95</td>
+                                <td class="py-4 pl-4 italic text-on-surface-variant">Claim rejected — invalid referral
+                                    details</td>
+                            </tr>
+                            <tr
+                                class="group hover:bg-surface-container-lowest transition-colors border-t border-outline-variant/10">
+                                <td class="py-4 px-2"><span class="w-2.5 h-2.5 bg-orange-400 rounded-full block"></span>
+                                </td>
+                                <td class="py-4 font-semibold text-orange-600">Unbilled appointment</td>
+                                <td class="py-4 font-bold text-indigo-600">#APT-4188</td>
+                                <td class="py-4 font-medium">Elena Rodriguez</td>
+                                <td class="py-4 text-on-surface-variant">Oct 11, 2023</td>
+                                <td class="py-4 text-center text-xs">Follow-up Consultation</td>
+                                <td class="py-4 text-right font-bold">—</td>
+                                <td class="py-4 pl-4 italic text-on-surface-variant">Completed appointment with no
+                                    matching invoice</td>
+                            </tr>
+                            <tr
+                                class="group hover:bg-surface-container-lowest transition-colors border-t border-outline-variant/10">
+                                <td class="py-4 px-2"><span class="w-2.5 h-2.5 bg-yellow-400 rounded-full block"></span>
+                                </td>
+                                <td class="py-4 font-semibold text-yellow-600">Overdue gap payment</td>
+                                <td class="py-4 font-bold text-indigo-600">#INV-8952</td>
+                                <td class="py-4 font-medium">Arthur Morgan</td>
+                                <td class="py-4 text-on-surface-variant">Sep 24, 2023</td>
+                                <td class="py-4 text-center font-mono">110</td>
+                                <td class="py-4 text-right font-bold">$55.00</td>
+                                <td class="py-4 pl-4 italic text-on-surface-variant">Patient gap unpaid — 18 days
+                                    overdue</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Row 4: Monthly Revenue Trend -->
+            <div class="neomorph-raised p-8 rounded-2xl">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <h3 class="font-bold text-on-surface text-lg">Monthly Revenue Trend</h3>
+                        <p class="text-xs text-on-surface-variant">Breakdown by billing type across last 6 months</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-tertiary"></span>
+                            <span class="text-xs font-semibold text-on-surface-variant">Private</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-indigo-500"></span>
+                            <span class="text-xs font-semibold text-on-surface-variant">Bulk Bill</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-primary-container"></span>
+                            <span class="text-xs font-semibold text-on-surface-variant">DVA</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-indigo-300"></span>
+                            <span class="text-xs font-semibold text-on-surface-variant">ECLIPSE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-64 flex items-end justify-between space-x-4 px-4">
+                    <!-- May -->
+                    <div class="flex-1 flex flex-col items-center space-y-2 group">
+                        <div
+                            class="w-full flex flex-col-reverse h-full max-h-48 overflow-hidden rounded-md neomorph-raised">
+                            <div class="w-full bg-indigo-500/80" style="height: 40%"></div>
+                            <div class="w-full bg-tertiary/80" style="height: 30%"></div>
+                            <div class="w-full bg-primary-container/80" style="height: 15%"></div>
+                            <div class="w-full bg-indigo-300/80" style="height: 15%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-on-surface-variant">MAY</span>
+                    </div>
+                    <!-- Jun -->
+                    <div class="flex-1 flex flex-col items-center space-y-2 group">
+                        <div
+                            class="w-full flex flex-col-reverse h-full max-h-48 overflow-hidden rounded-md neomorph-raised">
+                            <div class="w-full bg-indigo-500/80" style="height: 35%"></div>
+                            <div class="w-full bg-tertiary/80" style="height: 35%"></div>
+                            <div class="w-full bg-primary-container/80" style="height: 20%"></div>
+                            <div class="w-full bg-indigo-300/80" style="height: 10%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-on-surface-variant">JUN</span>
+                    </div>
+                    <!-- Jul -->
+                    <div class="flex-1 flex flex-col items-center space-y-2 group">
+                        <div
+                            class="w-full flex flex-col-reverse h-full max-h-48 overflow-hidden rounded-md neomorph-raised">
+                            <div class="w-full bg-indigo-500/80" style="height: 45%"></div>
+                            <div class="w-full bg-tertiary/80" style="height: 25%"></div>
+                            <div class="w-full bg-primary-container/80" style="height: 15%"></div>
+                            <div class="w-full bg-indigo-300/80" style="height: 15%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-on-surface-variant">JUL</span>
+                    </div>
+                    <!-- Aug -->
+                    <div class="flex-1 flex flex-col items-center space-y-2 group">
+                        <div
+                            class="w-full flex flex-col-reverse h-full max-h-48 overflow-hidden rounded-md neomorph-raised">
+                            <div class="w-full bg-indigo-500/80" style="height: 30%"></div>
+                            <div class="w-full bg-tertiary/80" style="height: 45%"></div>
+                            <div class="w-full bg-primary-container/80" style="height: 15%"></div>
+                            <div class="w-full bg-indigo-300/80" style="height: 10%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-on-surface-variant">AUG</span>
+                    </div>
+                    <!-- Sep -->
+                    <div class="flex-1 flex flex-col items-center space-y-2 group">
+                        <div
+                            class="w-full flex flex-col-reverse h-full max-h-48 overflow-hidden rounded-md neomorph-raised">
+                            <div class="w-full bg-indigo-500/80" style="height: 50%"></div>
+                            <div class="w-full bg-tertiary/80" style="height: 20%"></div>
+                            <div class="w-full bg-primary-container/80" style="height: 20%"></div>
+                            <div class="w-full bg-indigo-300/80" style="height: 10%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-on-surface-variant">SEP</span>
+                    </div>
+                    <!-- Oct -->
+                    <div class="flex-1 flex flex-col items-center space-y-2 group">
+                        <div
+                            class="w-full flex flex-col-reverse h-full max-h-48 overflow-hidden rounded-md neomorph-raised">
+                            <div class="w-full bg-indigo-500/80" style="height: 40%"></div>
+                            <div class="w-full bg-tertiary/80" style="height: 40%"></div>
+                            <div class="w-full bg-primary-container/80" style="height: 10%"></div>
+                            <div class="w-full bg-indigo-300/80" style="height: 10%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-on-surface-variant">OCT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="p-8 mt-auto text-center text-xs text-on-surface-variant font-medium">
+            © 2023 INTELECOR Systems. All financial data encrypted and secured.
+        </footer>
+    </main>
+</body>
+
+</html>
