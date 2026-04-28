@@ -1,385 +1,432 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-container-low": "#e5e7ed",
-                    "primary": "#6366f1",
-                    "on-secondary": "#ffffff",
-                    "on-background": "#2e3040",
-                    "tertiary-fixed": "#ede9fe",
-                    "surface-container-high": "#dcdee4",
-                    "error-container": "#fee2e2",
-                    "secondary-fixed": "#d8dae6",
-                    "tertiary-fixed-dim": "#c4b5fd",
-                    "primary-container": "#818cf8",
-                    "tertiary": "#7c3aed",
-                    "surface-tint": "#6366f1",
-                    "on-secondary-container": "#585a68",
-                    "secondary": "#6c6e7e",
-                    "on-primary-container": "#e0e2ff",
-                    "surface-container": "#e2e4ea",
-                    "surface-dim": "#d4d6dc",
-                    "outline-variant": "#d0d2dc",
-                    "surface-bright": "#edeef4",
-                    "tertiary-container": "#a78bfa",
-                    "error": "#dc2626",
-                    "secondary-fixed-dim": "#b8baca",
-                    "on-error-container": "#991b1b",
-                    "on-error": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "on-tertiary-fixed": "#2e1065",
-                    "on-surface-variant": "#585a68",
-                    "on-surface": "#2e3040",
-                    "primary-fixed-dim": "#a5b4fc",
-                    "on-secondary-fixed": "#1a1b26",
-                    "surface-container-lowest": "#f0f2f8",
-                    "primary-fixed": "#e0e2ff",
-                    "on-primary-fixed": "#1e1b4b",
-                    "inverse-primary": "#a5b4fc",
-                    "on-tertiary-container": "#3b1f63",
-                    "surface-variant": "#dcdee4",
-                    "inverse-surface": "#2e3040",
-                    "background": "#e8eaf0",
-                    "secondary-container": "#d8dae6",
-                    "on-tertiary": "#ffffff",
-                    "surface": "#e8eaf0",
-                    "on-tertiary-fixed-variant": "#5b21b6",
-                    "on-primary-fixed-variant": "#4338ca",
-                    "outline": "#8a8c9a",
-                    "surface-container-highest": "#d6d8de",
-                    "inverse-on-surface": "#e8eaf0",
-                    "on-secondary-fixed-variant": "#404252"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.5rem",
-                    "lg": "1rem",
-                    "xl": "1.5rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Plus Jakarta Sans"],
-                    "body": ["Plus Jakarta Sans"],
-                    "label": ["Plus Jakarta Sans"]
-            }
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Intelecor | Clinical Performance Dashboard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#585f6c",
+            "on-primary-fixed": "#001c38",
+            "surface-container-low": "#f4f4f2",
+            "surface-container": "#eeeeec",
+            "outline-variant": "#c3c6cf",
+            "on-tertiary-fixed-variant": "#00522e",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e8e8e6",
+            "inverse-on-surface": "#f1f1ef",
+            "on-primary-fixed-variant": "#2b486b",
+            "surface-container-highest": "#e2e3e1",
+            "surface": "#f9f9f7",
+            "surface-tint": "#436084",
+            "primary-container": "#1b3a5c",
+            "tertiary": "#002a15",
+            "tertiary-container": "#004224",
+            "surface-variant": "#e2e3e1",
+            "on-secondary-fixed": "#151c27",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#abc9f2",
+            "secondary-fixed": "#dce2f3",
+            "on-secondary-fixed-variant": "#404754",
+            "background": "#f9f9f7",
+            "on-primary-container": "#87a4cc",
+            "on-error-container": "#93000a",
+            "primary": "#002444",
+            "tertiary-fixed": "#a5f4bf",
+            "on-surface-variant": "#43474e",
+            "on-error": "#ffffff",
+            "surface-bright": "#f9f9f7",
+            "primary-fixed": "#d2e4ff",
+            "inverse-surface": "#2f3130",
+            "on-tertiary-container": "#66b282",
+            "tertiary-fixed-dim": "#8ad7a4",
+            "on-surface": "#1a1c1b",
+            "error-container": "#ffdad6",
+            "secondary-container": "#dce2f3",
+            "on-background": "#1a1c1b",
+            "primary-fixed-dim": "#abc9f2",
+            "on-secondary-container": "#5e6572",
+            "on-tertiary-fixed": "#00210f",
+            "surface-dim": "#dadad8",
+            "secondary-fixed-dim": "#c0c7d6",
+            "outline": "#73777f",
+            "error": "#ba1a1a"
           },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
         },
-      }
-    </script>
-<style>
-        .neomorph-raised {
-            box-shadow: 6px 6px 12px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.6);
-        }
-        .neomorph-inset {
-            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.06), inset -4px -4px 8px rgba(255,255,255,0.5);
-        }
-        body {
-            background-color: #e8eaf0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: #2e3040;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="flex min-h-screen overflow-hidden">
-<!-- SideNavBar -->
-<aside class="hidden md:flex flex-col h-full p-6 space-y-4 bg-[#e8eaf0] h-screen w-64 rounded-r-2xl no-border shadow-[6px_0_12px_rgba(0,0,0,0.08)] z-20">
-<div class="mb-8 px-2">
-<span class="text-xl font-semibold tracking-tight text-indigo-600">INTELECOR</span>
-</div>
-<nav class="flex-1 space-y-4">
-<!-- Overview (Active) -->
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] text-indigo-600 font-semibold font-plus-jakarta-sans text-sm transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-<span>Overview</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 font-plus-jakarta-sans font-medium text-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] transition-all active:scale-95 duration-150" href="#">
-<span class="material-symbols-outlined" data-icon="payments">payments</span>
-<span>Financial</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 font-plus-jakarta-sans font-medium text-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] transition-all active:scale-95 duration-150" href="#">
-<span class="material-symbols-outlined" data-icon="settings_accessibility">settings_accessibility</span>
-<span>Operations</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 font-plus-jakarta-sans font-medium text-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] transition-all active:scale-95 duration-150" href="#">
-<span class="material-symbols-outlined" data-icon="description">description</span>
-<span>Documents</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 font-plus-jakarta-sans font-medium text-sm hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] transition-all active:scale-95 duration-150" href="#">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
-<span>Settings</span>
-</a>
-</nav>
-</aside>
-<div class="flex-1 flex flex-col min-h-0 overflow-y-auto">
-<!-- TopAppBar -->
-<header class="flex items-center justify-between px-8 w-full bg-[#e8eaf0] h-20 no-border shadow-[0_4px_12px_rgba(0,0,0,0.03)] z-10 sticky top-0">
-<div class="flex items-center gap-4">
-<h1 class="font-plus-jakarta-sans font-semibold text-lg text-on-surface">Overview</h1>
-<div class="ml-8 hidden md:flex items-center px-4 py-2 neomorph-inset rounded-full w-96 group focus-within:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06)]">
-<span class="material-symbols-outlined text-slate-400 mr-2" data-icon="search">search</span>
-<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-400" placeholder="Search patient or record..." type="text"/>
-</div>
-</div>
-<div class="flex items-center gap-6">
-<button class="neomorph-raised p-2 rounded-full text-slate-500 hover:text-indigo-600 transition-colors">
-<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
-</button>
-<div class="relative">
-<button class="neomorph-raised p-2 rounded-full text-slate-500 hover:text-indigo-600 transition-colors">
-<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-</button>
-<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-indigo-500 rounded-full border-2 border-[#e8eaf0]"></span>
-</div>
-</div>
-</header>
-<!-- Main Content Canvas -->
-<main class="p-8 space-y-8 max-w-7xl mx-auto w-full">
-<!-- Headline Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Revenue Card -->
-<div class="neomorph-raised p-6 rounded-2xl bg-[#e8eaf0]">
-<div class="flex justify-between items-start mb-4">
-<div class="p-3 neomorph-inset rounded-xl text-indigo-600">
-<span class="material-symbols-outlined" data-icon="payments">payments</span>
-</div>
-<span class="text-xs font-bold text-emerald-500 bg-emerald-100/50 px-2 py-1 rounded-full">+12%</span>
-</div>
-<p class="text-on-surface-variant text-sm font-medium">Revenue This Week</p>
-<h3 class="text-2xl font-bold text-on-surface mt-1">$24,500</h3>
-</div>
-<!-- Patients Card -->
-<div class="neomorph-raised p-6 rounded-2xl bg-[#e8eaf0]">
-<div class="flex justify-between items-start mb-4">
-<div class="p-3 neomorph-inset rounded-xl text-indigo-600">
-<span class="material-symbols-outlined" data-icon="group">group</span>
-</div>
-<span class="text-xs font-bold text-emerald-500 bg-emerald-100/50 px-2 py-1 rounded-full">+5%</span>
-</div>
-<p class="text-on-surface-variant text-sm font-medium">Patients Seen</p>
-<h3 class="text-2xl font-bold text-on-surface mt-1">48</h3>
-</div>
-<!-- Outstanding Card -->
-<div class="neomorph-raised p-6 rounded-2xl bg-[#e8eaf0]">
-<div class="flex justify-between items-start mb-4">
-<div class="p-3 neomorph-inset rounded-xl text-tertiary">
-<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
-</div>
-</div>
-<p class="text-on-surface-variant text-sm font-medium">Outstanding Revenue</p>
-<h3 class="text-2xl font-bold text-on-surface mt-1">$3,200</h3>
-<p class="text-[10px] text-on-surface-variant mt-1 font-semibold uppercase tracking-wider">12 pending</p>
-</div>
-<!-- Unsigned Letters Card -->
-<div class="neomorph-raised p-6 rounded-2xl bg-[#e8eaf0]">
-<div class="flex justify-between items-start mb-4">
-<div class="p-3 neomorph-inset rounded-xl text-error">
-<span class="material-symbols-outlined" data-icon="mail">mail</span>
-</div>
-<span class="text-[10px] font-bold text-error bg-error-container/50 px-2 py-1 rounded-full uppercase">Action required</span>
-</div>
-<p class="text-on-surface-variant text-sm font-medium">Unsigned Letters</p>
-<h3 class="text-2xl font-bold text-on-surface mt-1">12</h3>
-</div>
-</div>
-<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
-<!-- Comparison Table -->
-<div class="xl:col-span-2 space-y-6">
-<div class="neomorph-raised rounded-2xl bg-[#e8eaf0] overflow-hidden">
-<div class="p-6 flex justify-between items-center">
-<h4 class="font-semibold text-on-surface">This week vs last week</h4>
-<button class="neomorph-raised px-4 py-1.5 rounded-full text-xs font-semibold text-indigo-600 hover:shadow-sm transition-all">Download Report</button>
-</div>
-<div class="px-6 pb-6 overflow-x-auto">
-<table class="w-full text-left">
-<thead class="text-xs uppercase tracking-wider text-on-surface-variant border-b border-surface-container-high">
-<tr>
-<th class="py-3 font-semibold">Metric</th>
-<th class="py-3 font-semibold text-center">This Week</th>
-<th class="py-3 font-semibold text-center">Last Week</th>
-<th class="py-3 font-semibold text-right">Change</th>
-</tr>
-</thead>
-<tbody class="text-sm divide-y divide-surface-container-high/50">
-<tr>
-<td class="py-4 font-medium">Total appointments</td>
-<td class="py-4 text-center font-bold">58</td>
-<td class="py-4 text-center">54</td>
-<td class="py-4 text-right text-emerald-500 font-bold">+7.4%</td>
-</tr>
-<tr>
-<td class="py-4 font-medium">Completed</td>
-<td class="py-4 text-center font-bold">48</td>
-<td class="py-4 text-center">45</td>
-<td class="py-4 text-right text-emerald-500 font-bold">+6.6%</td>
-</tr>
-<tr>
-<td class="py-4 font-medium">New patients</td>
-<td class="py-4 text-center font-bold">14</td>
-<td class="py-4 text-center">12</td>
-<td class="py-4 text-right text-emerald-500 font-bold">+16.6%</td>
-</tr>
-<tr>
-<td class="py-4 font-medium">Follow-ups</td>
-<td class="py-4 text-center font-bold">30</td>
-<td class="py-4 text-center">32</td>
-<td class="py-4 text-right text-slate-500 font-bold">-6.2%</td>
-</tr>
-<tr>
-<td class="py-4 font-medium">Procedures</td>
-<td class="py-4 text-center font-bold">10</td>
-<td class="py-4 text-center">8</td>
-<td class="py-4 text-right text-emerald-500 font-bold">+25%</td>
-</tr>
-<tr>
-<td class="py-4 font-medium">DNAs (Did Not Attend)</td>
-<td class="py-4 text-center font-bold">2</td>
-<td class="py-4 text-center">4</td>
-<td class="py-4 text-right text-emerald-500 font-bold">-50%</td>
-</tr>
-<tr>
-<td class="py-4 font-medium">Revenue collected</td>
-<td class="py-4 text-center font-bold">$24,500</td>
-<td class="py-4 text-center">$21,800</td>
-<td class="py-4 text-right text-emerald-500 font-bold">+12.4%</td>
-</tr>
-<tr>
-<td class="py-4 font-medium">Revenue outstanding</td>
-<td class="py-4 text-center font-bold">$3,200</td>
-<td class="py-4 text-center">$3,400</td>
-<td class="py-4 text-right text-emerald-500 font-bold">-5.8%</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<!-- Action Items Panel -->
-<div class="space-y-6">
-<div class="neomorph-raised p-6 rounded-2xl bg-[#e8eaf0] h-full flex flex-col">
-<div class="flex items-center gap-2 mb-6">
-<span class="material-symbols-outlined text-indigo-600" data-icon="task_alt">task_alt</span>
-<h4 class="font-semibold text-on-surface">Action Items</h4>
-</div>
-<div class="space-y-4 flex-1">
-<div class="neomorph-inset p-4 rounded-xl flex items-center justify-between border-l-4 border-error">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-error" data-icon="report">report</span>
-<div>
-<p class="text-sm font-semibold">Rejected Claim</p>
-<p class="text-[10px] text-on-surface-variant">Medicare: Case #9921</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-slate-400 text-sm" data-icon="chevron_right">chevron_right</span>
-</div>
-<div class="neomorph-inset p-4 rounded-xl flex items-center justify-between border-l-4 border-tertiary">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-tertiary" data-icon="sync_problem">sync_problem</span>
-<div>
-<p class="text-sm font-semibold">2 Referrals Expiring</p>
-<p class="text-[10px] text-on-surface-variant">Requires patient follow-up</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-slate-400 text-sm" data-icon="chevron_right">chevron_right</span>
-</div>
-<div class="neomorph-inset p-4 rounded-xl flex items-center justify-between border-l-4 border-indigo-500">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-indigo-600" data-icon="edit_note">edit_note</span>
-<div>
-<p class="text-sm font-semibold">12 Letters Unsigned</p>
-<p class="text-[10px] text-on-surface-variant">Batch signing available</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-slate-400 text-sm" data-icon="chevron_right">chevron_right</span>
-</div>
-<div class="neomorph-inset p-4 rounded-xl flex items-center justify-between border-l-4 border-amber-500">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-amber-600" data-icon="warning">warning</span>
-<div>
-<p class="text-sm font-semibold">3 Unpaid Gap Invoices</p>
-<p class="text-[10px] text-on-surface-variant">Past due &gt; 14 days</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-slate-400 text-sm" data-icon="chevron_right">chevron_right</span>
-</div>
-</div>
-<button class="w-full mt-6 neomorph-raised py-3 rounded-xl text-indigo-600 font-bold text-xs uppercase tracking-widest hover:shadow-[4px_4px_8px_rgba(0,0,0,0.04)] transition-all active:scale-[0.98]">
-                        View All Tasks
-                    </button>
-</div>
-</div>
-</div>
-<!-- Daily Revenue Trend Line Chart -->
-<div class="neomorph-raised p-8 rounded-2xl bg-[#e8eaf0]">
-<div class="flex justify-between items-end mb-8">
-<div>
-<h4 class="font-semibold text-on-surface">Daily Revenue Trend</h4>
-<p class="text-xs text-on-surface-variant">Current month performance</p>
-</div>
-<div class="flex gap-4">
-<div class="flex items-center gap-2">
-<span class="w-6 h-0.5 bg-indigo-500"></span>
-<span class="text-xs font-medium text-on-surface-variant">Current Month</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-6 h-0.5 border-b border-dashed border-slate-400"></span>
-<span class="text-xs font-medium text-on-surface-variant">Target Average</span>
-</div>
-</div>
-</div>
-<div class="relative h-64 w-full px-4">
-<!-- SVG Line Chart Mockup -->
-<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1000 200">
-<!-- Target line -->
-<line class="stroke-slate-400" stroke-dasharray="8 4" stroke-width="1.5" x1="0" x2="1000" y1="100" y2="100"></line>
-<!-- Revenue line -->
-<path d="M0,150 L50,140 L100,160 L150,110 L200,120 L250,90 L300,105 L350,70 L400,85 L450,40 L500,60 L550,55 L600,75 L650,30 L700,50 L750,45 L800,65 L850,20 L900,40 L950,35 L1000,55" fill="none" stroke="#6366f1" stroke-width="3"></path>
-<!-- Points -->
-<circle cx="500" cy="60" fill="#6366f1" r="4"></circle>
-<circle cx="1000" cy="55" fill="#6366f1" r="4"></circle>
-</svg>
-<!-- X-Axis Labels -->
-<div class="flex justify-between mt-4">
-<span class="text-[10px] font-bold text-on-surface-variant">01</span>
-<span class="text-[10px] font-bold text-on-surface-variant">05</span>
-<span class="text-[10px] font-bold text-on-surface-variant">10</span>
-<span class="text-[10px] font-bold text-on-surface-variant">15</span>
-<span class="text-[10px] font-bold text-on-surface-variant">20</span>
-<span class="text-[10px] font-bold text-on-surface-variant">25</span>
-<span class="text-[10px] font-bold text-on-surface-variant">30</span>
-</div>
-</div>
-</div>
-</main>
-</div>
-<!-- Responsive BottomNavBar for Mobile -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-[#e8eaf0] flex items-center justify-around z-30 shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
-<button class="text-indigo-600 flex flex-col items-center">
-<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
-<span class="text-[10px] font-bold">Overview</span>
-</button>
-<button class="text-slate-400 flex flex-col items-center">
-<span class="material-symbols-outlined" data-icon="payments">payments</span>
-<span class="text-[10px]">Financial</span>
-</button>
-<button class="text-slate-400 flex flex-col items-center">
-<span class="material-symbols-outlined" data-icon="settings_accessibility">settings_accessibility</span>
-<span class="text-[10px]">Ops</span>
-</button>
-<button class="text-slate-400 flex flex-col items-center">
-<span class="material-symbols-outlined" data-icon="description">description</span>
-<span class="text-[10px]">Docs</span>
-</button>
-</nav>
-</body></html>
+
+<body class="bg-surface text-on-surface flex min-h-screen">
+  <!-- SideNavBar (Shared Component) -->
+  <aside class="flex flex-col h-screen fixed left-0 top-0 py-6 bg-[#1B3A5C] w-64 z-50">
+    <div class="px-6 mb-10">
+      <h1 class="text-2xl font-black tracking-tighter text-white">INTELECOR</h1>
+    </div>
+    <nav class="flex-1 space-y-2">
+      <!-- Active: Overview -->
+      <a class="flex items-center px-4 py-3 bg-[#4e739b] text-white rounded-lg mx-2 scale-95 transition-all duration-200"
+        href="#">
+        <span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>
+        <span class="font-inter text-sm font-medium">Overview</span>
+      </a>
+      <a class="flex items-center px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 mx-2 transition-all duration-200"
+        href="#">
+        <span class="material-symbols-outlined mr-3 text-[20px]">payments</span>
+        <span class="font-inter text-sm font-medium">Financial</span>
+      </a>
+      <a class="flex items-center px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 mx-2 transition-all duration-200"
+        href="#">
+        <span class="material-symbols-outlined mr-3 text-[20px]">insights</span>
+        <span class="font-inter text-sm font-medium">Operations</span>
+      </a>
+      <a class="flex items-center px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 mx-2 transition-all duration-200"
+        href="#">
+        <span class="material-symbols-outlined mr-3 text-[20px]">description</span>
+        <span class="font-inter text-sm font-medium">Documents</span>
+      </a>
+      <a class="flex items-center px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 mx-2 transition-all duration-200"
+        href="#">
+        <span class="material-symbols-outlined mr-3 text-[20px]">settings</span>
+        <span class="font-inter text-sm font-medium">Settings</span>
+      </a>
+    </nav>
+    <div class="px-6 py-4 border-t border-white/10">
+      <div class="flex items-center space-x-3">
+        <div
+          class="w-8 h-8 rounded-full bg-[#4e739b] flex items-center justify-center text-xs font-bold text-white shrink-0">
+          AR</div>
+        <div class="text-[11px] text-slate-300 leading-tight">
+          <p class="font-semibold text-white">Dr. Andrew Roy</p>
+          <p>Cardiology Unit A</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <!-- Main Content Area -->
+  <main class="ml-64 flex-1 flex flex-col min-h-screen">
+    <!-- TopNavBar (Shared Component) -->
+    <header
+      class="flex justify-between items-center w-full px-8 py-4 bg-white dark:bg-slate-900 border-b border-surface-container sticky top-0 z-40">
+      <div class="flex items-center space-x-4">
+        <h2 class="text-xl font-bold text-[#1B3A5C] dark:text-slate-100 font-inter tracking-tight">Clinical Overview
+        </h2>
+      </div>
+      <div class="flex items-center space-x-6">
+        <nav class="hidden md:flex space-x-6">
+          <a class="text-[#4e739b] font-semibold border-b-2 border-[#4e739b] pb-1" href="#">Overview</a>
+          <a class="text-slate-500 hover:text-[#4e739b] transition-colors" href="#">All practitioners</a>
+        </nav>
+        <div class="flex items-center space-x-4 text-slate-500">
+          <button class="p-2 hover:bg-slate-50 rounded-full transition-colors">
+            <span class="material-symbols-outlined">calendar_today</span>
+          </button>
+          <button class="p-2 hover:bg-slate-50 rounded-full transition-colors relative">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="p-8 space-y-8 max-w-7xl mx-auto w-full">
+      <!-- Headline Cards Section -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Revenue Card -->
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_24px_24px_0_rgba(0,36,68,0.04)]">
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-xs font-bold tracking-widest text-secondary uppercase">Revenue This Week</span>
+            <span class="material-symbols-outlined text-primary/40">payments</span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <h3 class="text-3xl font-bold text-primary tracking-tight">$24,500</h3>
+            <span class="text-xs font-semibold text-tertiary-container flex items-center">
+              <span class="material-symbols-outlined text-sm">arrow_upward</span> 12%
+            </span>
+          </div>
+          <p class="text-[10px] text-outline mt-2">vs. $21,800 last week</p>
+        </div>
+        <!-- Patients Card -->
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_24px_24px_0_rgba(0,36,68,0.04)]">
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-xs font-bold tracking-widest text-secondary uppercase">Patients Seen</span>
+            <span class="material-symbols-outlined text-primary/40">group</span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <h3 class="text-3xl font-bold text-primary tracking-tight">48</h3>
+            <span class="text-xs font-semibold text-tertiary-container flex items-center">
+              <span class="material-symbols-outlined text-sm">arrow_upward</span> 4
+            </span>
+          </div>
+          <p class="text-[10px] text-outline mt-2">Capacity Utilization: 92%</p>
+        </div>
+        <!-- Outstanding Revenue Card -->
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_24px_24px_0_rgba(0,36,68,0.04)]">
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-xs font-bold tracking-widest text-secondary uppercase">Outstanding</span>
+            <span class="material-symbols-outlined text-primary/40">pending_actions</span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <h3 class="text-3xl font-bold text-primary tracking-tight">$3,200</h3>
+            <span class="text-xs font-semibold text-error flex items-center">
+              <span class="material-symbols-outlined text-sm">priority_high</span>
+            </span>
+          </div>
+          <p class="text-[10px] text-outline mt-2">~$166k/yr annualized gap</p>
+        </div>
+        <!-- Unsigned Letters Card -->
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_24px_24px_0_rgba(0,36,68,0.04)]">
+          <div class="flex justify-between items-start mb-4">
+            <span class="text-xs font-bold tracking-widest text-secondary uppercase">Unsigned Letters</span>
+            <span class="material-symbols-outlined text-primary/40">draw</span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <h3 class="text-3xl font-bold text-primary tracking-tight">12</h3>
+            <span class="text-xs font-semibold text-error flex items-center">
+              <span class="material-symbols-outlined text-sm">notification_important</span>
+            </span>
+          </div>
+          <p class="text-[10px] text-outline mt-2">3 pending for &gt; 48 hours</p>
+        </div>
+      </section>
+      <!-- Middle Section: Asymmetric Bento Grid -->
+      <section class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <!-- Comparative Performance Table -->
+        <div class="lg:col-span-3 bg-surface-container-low p-1 rounded-xl overflow-hidden">
+          <div class="bg-surface-container-lowest p-6 h-full rounded-lg">
+            <h4 class="text-lg font-bold text-primary mb-6 flex items-center">
+              Comparative Performance
+              <span class="ml-2 text-xs font-normal text-outline">Last 7 Days</span>
+            </h4>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left">
+                <thead class="border-b border-surface-container">
+                  <tr class="text-outline uppercase text-[10px] font-bold tracking-widest">
+                    <th class="pb-4 font-bold">Metric</th>
+                    <th class="pb-4 font-bold">This Week</th>
+                    <th class="pb-4 font-bold">Last Week</th>
+                    <th class="pb-4 font-bold text-right">Change</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-surface-container/50">
+                  <tr class="group hover:bg-surface-container-low transition-colors">
+                    <td class="py-4 font-medium text-primary">Gross Billings</td>
+                    <td class="py-4">$32,150</td>
+                    <td class="py-4">$29,400</td>
+                    <td class="py-4 text-right text-tertiary-container font-semibold">+9.3%</td>
+                  </tr>
+                  <tr class="group hover:bg-surface-container-low transition-colors">
+                    <td class="py-4 font-medium text-primary">Revenue Collected</td>
+                    <td class="py-4">$24,500</td>
+                    <td class="py-4">$21,800</td>
+                    <td class="py-4 text-right text-tertiary-container font-semibold">+12.4%</td>
+                  </tr>
+                  <tr class="group hover:bg-surface-container-low transition-colors">
+                    <td class="py-4 font-medium text-primary">Patient Consultations</td>
+                    <td class="py-4">48</td>
+                    <td class="py-4">44</td>
+                    <td class="py-4 text-right text-tertiary-container font-semibold">+9.1%</td>
+                  </tr>
+                  <tr class="group hover:bg-surface-container-low transition-colors">
+                    <td class="py-4 font-medium text-primary">Avg. Bill per Patient</td>
+                    <td class="py-4">$670</td>
+                    <td class="py-4">$668</td>
+                    <td class="py-4 text-right text-tertiary-container font-semibold">+0.3%</td>
+                  </tr>
+                  <tr class="group hover:bg-surface-container-low transition-colors">
+                    <td class="py-4 font-medium text-primary">Rejection Rate</td>
+                    <td class="py-4">2.1%</td>
+                    <td class="py-4">3.4%</td>
+                    <td class="py-4 text-right text-tertiary-container font-semibold">-1.3%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Priority Action Items -->
+        <div class="lg:col-span-2 bg-primary-container p-8 rounded-xl text-white">
+          <div class="flex justify-between items-center mb-6">
+            <h4 class="text-lg font-bold">Priority Action Items</h4>
+            <span class="px-2 py-1 bg-white/10 rounded text-[10px] tracking-widest uppercase">Sorted by Value</span>
+          </div>
+          <div class="space-y-4">
+            <!-- Action Item 1: Critical -->
+            <div
+              class="bg-white/5 border-l-4 border-error p-4 rounded-r-lg hover:bg-white/10 transition-all cursor-pointer">
+              <div class="flex justify-between items-start mb-1">
+                <span class="text-sm font-bold">1 Rejected Claim</span>
+                <span class="text-xs font-bold text-red-300">$450.00 at risk</span>
+              </div>
+              <p class="text-xs text-slate-300">Medicare #9921 - Incorrect provider identifier.</p>
+            </div>
+            <!-- Action Item 2: Warning -->
+            <div
+              class="bg-white/5 border-l-4 border-[#C87F29] p-4 rounded-r-lg hover:bg-white/10 transition-all cursor-pointer">
+              <div class="flex justify-between items-start mb-1">
+                <span class="text-sm font-bold">3 Unpaid Gap Invoices</span>
+                <span class="text-xs font-bold text-orange-200">$3,900 outstanding</span>
+              </div>
+              <p class="text-xs text-slate-300">Past due &gt; 14 days. Requires manual verification.</p>
+            </div>
+            <!-- Action Item 3: Warning -->
+            <div
+              class="bg-white/5 border-l-4 border-[#C87F29] p-4 rounded-r-lg hover:bg-white/10 transition-all cursor-pointer">
+              <div class="flex justify-between items-start mb-1">
+                <span class="text-sm font-bold">2 Referrals Expiring</span>
+                <span class="text-xs font-bold text-orange-200">Urgent</span>
+              </div>
+              <p class="text-xs text-slate-300">Patients: Smith, J. &amp; Roberts, L. Requires follow-up.</p>
+            </div>
+            <!-- Action Item 4: Neutral -->
+            <div
+              class="bg-white/5 border-l-4 border-slate-400 p-4 rounded-r-lg hover:bg-white/10 transition-all cursor-pointer">
+              <div class="flex justify-between items-start mb-1">
+                <span class="text-sm font-bold">12 Letters Unsigned</span>
+                <button
+                  class="text-[10px] font-bold uppercase tracking-widest text-[#4e739b] bg-white px-2 py-0.5 rounded hover:bg-slate-100 transition-colors">Batch
+                  Sign</button>
+              </div>
+              <p class="text-xs text-slate-300">Routine clinical correspondence ready for review.</p>
+            </div>
+          </div>
+          <button
+            class="w-full mt-8 py-3 bg-[#4e739b] hover:bg-opacity-90 rounded-lg text-sm font-bold transition-all shadow-lg shadow-black/20">
+            View All Tasks
+          </button>
+        </div>
+      </section>
+      <!-- Weekly Practice Trend Chart Container -->
+      <section
+        class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_24px_24px_0_rgba(0,36,68,0.04)] border border-surface-container-low">
+        <div class="flex justify-between items-end mb-10">
+          <div>
+            <h4 class="text-lg font-bold text-primary">Weekly Practice Trend</h4>
+            <p class="text-xs text-outline">Revenue vs. Volume Trajectory (Trailing 10 Weeks)</p>
+          </div>
+          <div class="flex items-center space-x-6">
+            <div class="flex items-center text-[10px] font-bold text-secondary uppercase tracking-widest">
+              <span class="w-3 h-3 bg-primary-container rounded-sm mr-2"></span>
+              Revenue Collected
+            </div>
+            <div class="flex items-center text-[10px] font-bold text-secondary uppercase tracking-widest">
+              <span class="w-3 h-0.5 bg-tertiary-container mr-2"></span>
+              Patients Seen
+            </div>
+            <div class="flex items-center text-[10px] font-bold text-secondary uppercase tracking-widest">
+              <span class="w-3 h-0.5 border-t border-dashed border-error mr-2"></span>
+              Outstanding
+            </div>
+          </div>
+        </div>
+        <!-- Abstract Chart Visualization -->
+        <div class="relative h-64 w-full flex items-end space-x-4 px-2">
+          <!-- Week 1 -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/20 h-32 rounded-t-sm group-hover:bg-primary/30 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W01</span>
+          </div>
+          <!-- Week 2 -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/20 h-40 rounded-t-sm group-hover:bg-primary/30 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W02</span>
+          </div>
+          <!-- Week 3 -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/20 h-36 rounded-t-sm group-hover:bg-primary/30 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W03</span>
+          </div>
+          <!-- Week 4 -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/20 h-48 rounded-t-sm group-hover:bg-primary/30 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W04</span>
+          </div>
+          <!-- Week 5 -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/20 h-44 rounded-t-sm group-hover:bg-primary/30 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W05</span>
+          </div>
+          <!-- Week 6 -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/20 h-52 rounded-t-sm group-hover:bg-primary/30 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W06</span>
+          </div>
+          <!-- Week 7 -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/20 h-40 rounded-t-sm group-hover:bg-primary/30 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W07</span>
+          </div>
+          <!-- Week 8 -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/20 h-56 rounded-t-sm group-hover:bg-primary/30 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W08</span>
+          </div>
+          <!-- Week 9 (Last Week) -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary/40 h-52 rounded-t-sm group-hover:bg-primary/50 transition-all"></div>
+            <span class="mt-4 text-[10px] font-bold text-outline">W09</span>
+          </div>
+          <!-- Week 10 (Current) -->
+          <div class="relative flex-1 flex flex-col justify-end items-center group">
+            <div class="w-full bg-primary-container h-60 rounded-t-sm shadow-lg"></div>
+            <span class="mt-4 text-[10px] font-bold text-primary">Current</span>
+          </div>
+          <!-- SVG Overlay for Trend Lines -->
+          <svg class="absolute top-0 left-0 w-full h-full pointer-events-none" preserveaspectratio="none">
+            <!-- Patient Line (Green) -->
+            <path d="M 30 160 Q 150 140 300 120 T 600 100 T 900 80" fill="none" stroke="#2D7A4F" stroke-width="2.5">
+            </path>
+            <!-- Outstanding Line (Red Dotted) -->
+            <path d="M 30 200 Q 150 210 300 190 T 600 220 T 900 180" fill="none" stroke="#ba1a1a" stroke-dasharray="4,4"
+              stroke-width="1.5"></path>
+          </svg>
+        </div>
+      </section>
+      <!-- Bottom Data Footer -->
+      <footer
+        class="flex justify-center items-center text-[10px] font-bold text-outline uppercase tracking-[0.2em] border-t border-surface-container pt-8 pb-4">
+        <div class="flex items-center space-x-2">
+          <span>INTELECOR</span>
+          <span>·</span>
+          <span>Last Refreshed: 14:02 PM AEST</span>
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+
+</html>

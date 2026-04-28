@@ -8,7 +8,9 @@
       "Bash(pip install:*)",
       "Bash(xargs ls:*)",
       "Bash(python scripts/run_pipeline.py)",
-      "Bash(python -c \"import uvicorn; print\\(uvicorn.__version__\\)\")"
+      "Bash(python -c \"import uvicorn; print\\(uvicorn.__version__\\)\")",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)"
     ]
   }
 }
